@@ -10,14 +10,14 @@ const Hero = ({
   logo,
   background
 }) => (
-  <section className="block-hero">
+  <section className="block hero">
     {(logo) ? <img className="logo" src={logo}/> : ""}
     <div className="container">
       {(strapline)? <p className="strapline">{strapline}</p> : ""}
       <h1>{title}</h1>
       <nav className="button-row" role="navigation">
         {(mainCtaLink && mainCtaText) ?
-          <a className="button" href={mainCtaLink}>{mainCtaText}</a>
+          <a className="button gradient" href={mainCtaLink}>{mainCtaText}</a>
         : "" }
         {(secondaryCtaLink && secondaryCtaText) ?
           <a className="button outline" href={secondaryCtaLink}>{secondaryCtaText}</a>

@@ -8,6 +8,10 @@ const IndexPage = ({data}) => (
     <Hero
       title={data.site.siteMetadata.title}
       strapline="Varius World Tech ICO"
+      mainCtaLink="#"
+      mainCtaText="Buy tokens"
+      secondaryCtaLink="#"
+      secondaryCtaText="Whitepaper"
     />
   </div>
 )
