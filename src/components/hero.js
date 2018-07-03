@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Hero = ({
-  title,
+  headline,
   strapline,
   mainCtaText,
   mainCtaLink,
@@ -14,7 +14,7 @@ const Hero = ({
     {(logo) ? <img className="logo" src={logo}/> : ""}
     <div className="container">
       {(strapline)? <p className="strapline">{strapline}</p> : ""}
-      <h1>{title}</h1>
+      <h1>{headline}</h1>
       <nav className="button-row" role="navigation">
         {(mainCtaLink && mainCtaText) ?
           <a className="button gradient" href={mainCtaLink}>{mainCtaText}</a>

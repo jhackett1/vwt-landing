@@ -1,11 +1,16 @@
-// Color scheme
-$darkest: black
+// Color scheme & other
+$darkest: #000000
 $brand: #03285D
 $brand-accent: #3762b1
 $gradient-dark: #c09a4b
 $gradient-light: #feedbb
-$light-text: white
+$light: #F2F4FC
+$lightest: #ffffff
 
+$max-width: 1100px
+$font-stack: Roboto, sans-serif
+
+// Animations
 @keyframes glisten
   0%
     background-position: 0% 50%
@@ -17,37 +22,92 @@ $light-text: white
 // Mixins
 @mixin gradient
   background: #c09a4b
-  // background: -moz-linear-gradient(45deg, #c09a4b 0%, $gradient-light 50%, $gradient-dark 100%)
-  // background: -webkit-linear-gradient(45deg, $gradient-dark 0%,$gradient-light 50%,$gradient-dark 100%)
+  background: -moz-linear-gradient(45deg, #c09a4b 0%, $gradient-light 50%, $gradient-dark 100%)
+  background: -webkit-linear-gradient(45deg, $gradient-dark 0%,$gradient-light 50%,$gradient-dark 100%)
   background: linear-gradient(45deg, $gradient-dark 0%,$gradient-light 50%,$gradient-dark 100%)
   animation: glisten 1s ease infinite
+
 // Common styles
 *
   padding: 0
   margin: 0
   box-sizing: border-box
-  font-family: Roboto, sans-serif
-
+  font-family: $font-stack
 .container
-  max-width: 1000px
+  max-width: $max-width
   margin: 0px auto
-
+  padding: 10px 30px
 .button
   width: 100%
   max-width: 250px
   display: inline-block
   padding: 20px
-  background-color: $brand
-  color: $light-text
   text-transform: uppercase
   letter-spacing: 1px
   font-size: 0.8em
   text-decoration: none
+  text-align: center
+  &.solid
+    background-color: $brand
+    color: $lightest
+  &.bare
+    background-color: none
+    color: $lightest
+  &.gradient
+    @include gradient
+    color: $darkest
+  &.outline
+    border: 1px solid $brand-accent
+    color: $lightest
 
+.chapter-title
+  text-transform: uppercase
+  font-size: 0.8em
+  font-weight: 700
+  letter-spacing: 1px
+  padding-left: 35px
+  color: $brand
+  position: relative
+  margin-bottom: 40px
+  display: inline-block
+  &::before
+    content: ""
+    position: absolute
+    left: 0
+    top: 7px
+    height: 0
+    width: 20px
+    border-bottom: 2px solid $brand
+h1, h2, h3, h4, h5, p
+  line-height: 1.6em
+ul.selling-points
+  list-style-type: none
+  text-align: center
+  li
+    margin-bottom: 50px
+    h3
+      text-transform: uppercase
+      letter-spacing: 1px
+      font-size: 1em
+      margin-bottom: 10px
+    p
+      font-weight: 100
+
+
+// Header
+.block.header
+  background-color: $lightest
+  padding: 10px
+  .button
+    padding: 8px
+    font-size: 0.75em
+    width: auto
+
+// Hero block
 .block.hero
   background-color: $brand
   text-align: center
-  padding: 60px 40px
+  padding: 70px 40px
   .strapline
     @include gradient
     -webkit-background-clip: text
@@ -58,14 +118,108 @@ $light-text: white
     display: inline-block
     margin-bottom: 30px
   h1
-    color: $light-text
+    color: $lightest
     font-weight: 100
     font-size: 2.5em
     margin-bottom: 40px
   .button
     margin-bottom: 20px
-    &.gradient
-      @include gradient
-      color: $darkest
-    &.outline
-      border: 1px solid $brand-accent
+
+// Logos block
+.block.logos
+  .container
+    padding: 30px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-column-gap: 30px
+  img
+    filter: grayscale(1)
+    text-align: center
+    margin: 0 auto
+    margin-bottom: 30px
+    max-width: 100%
+
+// Explanation block
+.block.explanation
+  padding: 50px 0px
+  background-color: $light
+  h2.headline
+    font-weight: 100
+    color: $brand
+    text-align: center
+    margin-bottom: 40px
+  p
+    text-align: center
+    margin-bottom: 40px
+  section.buttons
+    text-align: center
+    .button
+      margin-bottom: 20px
+      &.bare
+        color: $brand
+
+// Selling points (right-aligned vertical list)
+.block.selling-points
+  background-color: $brand
+  color: $lightest
+  padding: 50px 0px
+  h2.headline
+    font-weight: 100
+    color: $lightest
+    text-align: center
+    margin-bottom: 40px
+  .chapter-title
+    color: $lightest
+    &::before
+      border-color: $lightest
+
+// Selling points alt (horizontal row)
+.block.selling-points-alt
+  padding: 50px 0px
+  h2.headline
+    font-weight: 100
+    text-align: center
+    margin-bottom: 40px
+
+// Tabs
+.block.tabs
+  padding: 50px 0px 0px 0px
+  background-color: $light
+  h2.headline
+    font-weight: 100
+    color: $brand
+    text-align: center
+    margin-bottom: 20px
+  p
+    text-align: center
+    margin-bottom: 40px
+  nav.tab-navigation ul
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    max-width: 500px
+    margin: 0 auto
+    li
+      flex: 1
+      text-align: center
+      text-transform: uppercase
+      font-size: 0.9em
+      font-weight: 700
+      color: $brand
+      padding: 12px
+      cursor: pointer
+      &.selected
+        background-color: $lightest
+        pointer-events: none
+        cursor: default
+  section.tabs
+    padding: 50px 0px
+    background-color: $lightest
+    div.tab
+      display: none
+      visibility: none
+      &.selected
+        display: block
+        visibility: visible
+        pointer

@@ -1,7 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Footer from '../components/footer'
 import './index.sass'
 
 const Layout = ({ children, data }) => (
@@ -14,7 +13,6 @@ const Layout = ({ children, data }) => (
       ]}
     />
     {children()}
-    <Footer siteTitle={data.site.siteMetadata.title} />
   </main>
 )
 
