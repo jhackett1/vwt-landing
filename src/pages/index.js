@@ -8,6 +8,9 @@ import Explanation from '../blocks/explanation'
 import SellingPoints from '../blocks/selling-points'
 import SellingPointsAlt from '../blocks/selling-points-alt'
 import Tabs from '../blocks/tabs'
+import Graphics from '../blocks/graphics'
+import Team from '../blocks/team'
+import Events from '../blocks/events'
 
 // Static assets
 import logo from '../../static/logo.svg'
@@ -104,6 +107,73 @@ const IndexPage = ({data}) => (
       mainCtaText="Apply for whitelist"
       secondaryCtaLink="#"
       secondaryCtaText="Set reminder"
+      />
+
+    <Graphics
+      headline="Token Distribution"
+      body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem."
+      chart1Title="Distribution"
+      chart1Data={{
+        labels: ['Token sale', 'Advisors', 'Community building', 'Foundation', 'Team and angel'],
+        series: [26, 10, 15, 29, 20]
+      }}
+      chart1Options={{
+        donut: true,
+        donutWidth: 60,
+        donutSolid: true,
+        startAngle: 0,
+        showLabel: false
+      }}
+      chart1Type="Pie"
+      chart2Title="Funds allocation"
+      chart2Data={{
+        labels: ['Token sale', 'Advisors', 'Community building', 'Foundation', 'Team and angel'],
+        series: [26, 10, 15, 29, 20]
+      }}
+      chart2Options={{
+        donut: true,
+        donutWidth: 60,
+        donutSolid: true,
+        startAngle: 0,
+        showLabel: false
+      }}
+      chart2Type="Pie"
+      />
+
+    <Team
+      chapterTitle="Team"
+      headline="Meet the team behind VWT"
+      teamMembers={{
+        images: ["http://placehold.it/80x80", "http://placehold.it/80x80", "http://placehold.it/80x80", "http://placehold.it/80x80"],
+        names: ["Name Surname", "Name Surname", "Name Surname", "Name Surname"],
+        titles: ["Role title", "Role title", "Role title", "Role title"],
+        bios: [
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt",
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt",
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt",
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt"
+        ],
+        twitters: ["#", null, null, "#"],
+        linkedins: ["#", null, "#", "#"]
+      }}
+      />
+
+    <Events
+      chapterTitle="Innovation"
+      headline="Meet the team and learn more about our technology"
+      teamMembers={{
+        images: ["http://placehold.it/80x80", "http://placehold.it/80x80", "http://placehold.it/80x80", "http://placehold.it/80x80"],
+        names: ["Name Surname", "Name Surname", "Name Surname", "Name Surname"],
+        titles: ["Role title", "Role title", "Role title", "Role title"],
+        bios: [
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt",
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt",
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt",
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt"
+        ],
+        twitters: ["#", null, null, "#"],
+        linkedins: ["#", null, "#", "#"]
+      }}
       />
 
   </div>

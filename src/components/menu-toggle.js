@@ -1,7 +1,7 @@
 import React from 'react'
 
-const MenuToggle = () => (
-  <svg width="20px" height="8px" viewBox="0 0 20 8" version="1.1">
+const MenuToggle = ({onClick}) => (
+  <svg onClick={onClick} width="20px" height="8px" viewBox="0 0 20 8" version="1.1" className="menu-toggle">
       <defs>
           <polygon id="path-1" points="0 0 20 0 20 2 0 2"></polygon>
           <polygon id="path-3" points="0 0 20 0 20 2 0 2"></polygon>
