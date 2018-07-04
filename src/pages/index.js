@@ -11,6 +11,9 @@ import Tabs from '../blocks/tabs'
 import Graphics from '../blocks/graphics'
 import Team from '../blocks/team'
 import Events from '../blocks/events'
+import Roadmap from '../blocks/roadmap'
+import Products from '../blocks/products'
+import SignUp from '../blocks/sign-up'
 
 // Static assets
 import logo from '../../static/logo.svg'
@@ -161,20 +164,90 @@ const IndexPage = ({data}) => (
     <Events
       chapterTitle="Innovation"
       headline="Meet the team and learn more about our technology"
-      teamMembers={{
-        images: ["http://placehold.it/80x80", "http://placehold.it/80x80", "http://placehold.it/80x80", "http://placehold.it/80x80"],
-        names: ["Name Surname", "Name Surname", "Name Surname", "Name Surname"],
-        titles: ["Role title", "Role title", "Role title", "Role title"],
-        bios: [
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt",
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt",
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt",
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt"
+      upcomingEvents={{
+        images: [
+          'http://placehold.it/200x200',
+          'http://placehold.it/200x200',
+          'http://placehold.it/200x200'
         ],
-        twitters: ["#", null, null, "#"],
-        linkedins: ["#", null, "#", "#"]
+        names: ['Event name', 'Event name', 'Event name'],
+        timeplaces: ['London, 2nd July 2018', 'London, 2nd July 2018', 'London, 2nd July 2018'],
+        descriptions: [
+          'Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et.', 'Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et.',
+          'Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et.'
+        ],
+        links: ['#', '#', null]
+      }}
+      laterEvents={{
+        images: [
+          'http://placehold.it/200x200',
+          'http://placehold.it/200x200',
+          'http://placehold.it/200x200',
+          'http://placehold.it/200x200',
+          'http://placehold.it/200x200'
+        ],
+        names: ['Event name', 'Event name', 'Event name', 'Event name', 'Event name'],
+        timeplaces: ['London, 2nd July 2018', 'London, 2nd July 2018', 'London, 2nd July 2018', 'London, 2nd July 2018', 'London, 2nd July 2018']
+      }}
+      subheadline="Want us to speak at your next event?"
+      body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt."
+      ctaLink="#"
+      ctaText="Email us"
+      />
+
+    <Roadmap
+      chapterTitle="Roadmap"
+      milestones={{
+        checked: [
+          true, true, true, true, true, true, false, false, false, false, false, false
+        ],
+        dates: [
+          'Aug 2017', 'Sep 2017', 'Oct 2017', 'Nov 2017', 'Dec 2017', 'Jan 2018', 'Feb 2018', 'Mar 2018', 'Aug 2018', 'Aug 2018', 'Aug 2018', 'Aug 2018',
+        ],
+        descriptions: [
+          'Milestone here', 'Milestone here', 'Milestone here', 'Milestone here', 'Milestone here', 'Milestone here', 'Milestone here', 'Milestone here', 'Milestone here', 'Milestone here', 'Milestone here', 'Milestone here'
+        ]
       }}
       />
+
+    <Explanation
+      chapterTitle="The opportunity"
+      image="/cards.png"
+      imageAlt="Cards"
+      headline="We can launch your online gaming platform at a fraction of the cost."
+      body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem. Aut voluptatem corporis placeat veritatis autem consequuntur architecto. Expedita natus ratione praesentium."
+      secondaryCtaLink="#"
+      secondaryCtaText="Discover our software"
+      reversed
+      />
+
+    <Products
+      headline="The Software Suite."
+      products={{
+        images: [
+          'http://placehold.it/200x200',
+          'http://placehold.it/200x200',
+          'http://placehold.it/200x200',
+        ],
+        names: [
+          'Whitelabel Casino',
+          'Hosting platform',
+          'VoX Wallet'
+        ],
+        checklist: [
+          ['Provident est voluptatum modi.', 'Provident est voluptatum modi.', 'Provident est voluptatum modi.'],
+          ['Provident est voluptatum modi.', 'Provident est voluptatum modi.', 'Provident est voluptatum modi.'],
+          ['Provident est voluptatum modi.', 'Provident est voluptatum modi.', 'Provident est voluptatum modi.']
+        ]
+      }}
+      />
+
+  <SignUp
+    headline="Keep in the loop"
+    body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem."
+    >
+    hello
+    </SignUp>
 
   </div>
 )

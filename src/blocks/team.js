@@ -33,8 +33,8 @@ const Team = ({
               <h5>{teamMembers.titles[i]}</h5>
               <p>{teamMembers.bios[i]}</p>
               <div className="team-member-social-links">
-                {(teamMembers.twitters[i]) ? <a href={teamMembers.twitters[i]}><Fa.FaTwitter/></a> : ""}
-                {(teamMembers.linkedins[i]) ? <a href={teamMembers.linkedins[i]}><Fa.FaLinkedin/></a> : ""}
+                {(teamMembers.twitters[i]) ? <a target="blank" href={teamMembers.twitters[i]}><Fa.FaTwitter/></a> : ""}
+                {(teamMembers.linkedins[i]) ? <a target="blank" href={teamMembers.linkedins[i]}><Fa.FaLinkedin/></a> : ""}
               </div>
             </li>
           ))}
