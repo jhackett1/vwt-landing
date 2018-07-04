@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Caret from '../components/caret.js'
+
 export default class Tabs extends React.Component{
   constructor(props){
     super(props)
@@ -20,6 +22,7 @@ export default class Tabs extends React.Component{
       <section className="block tabs" role="tablist">
 
         <div className="container">
+          {(this.props.icon)? <div className="icon"><img src={this.props.icon}/></div> : ""}
           {(this.props.headline)? <h2 className="headline">{this.props.headline}</h2>: "" }
           {(this.props.body)? <p>{this.props.body}</p>: "" }
         </div>
@@ -49,8 +52,26 @@ export default class Tabs extends React.Component{
                     key={i}
                     className={(this.state.selectedTab === i) ? "selected tab" : "tab"}
                     >
+                    <ul className="tab-content">
+                      {(this.props.tabContent[i]) ? this.props.tabContent[i].map((contentItem, j)=>(
+                        <li key={j} className="tab-content-item">
+                          <span className="label">{this.props.tabContentLabels[j]}</span>
+                          <span className="value">{contentItem}</span>
+                        </li>
+                      )): ""}
+                    </ul>
                     <h3>{tabName}</h3>
                     {(this.props.tabDescriptions) ? <p>{this.props.tabDescriptions[i]}</p> : ""}
+                    <section className="buttons">
+
+                      {(this.props.mainCtaLink && this.props.mainCtaText) ?
+                        <a className="button solid" href={this.props.mainCtaLink}>{this.props.mainCtaText}</a>
+                      : "" }
+                      {(this.props.secondaryCtaLink && this.props.secondaryCtaText) ?
+                        <a className="button bare" href={this.props.secondaryCtaLink}>{this.props.secondaryCtaText} <Caret /></a>
+                      : ""}
+                    </section>
+
                   </div>
                 ))
             : ""}

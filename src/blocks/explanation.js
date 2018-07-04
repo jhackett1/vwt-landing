@@ -1,5 +1,8 @@
 import React from 'react'
 
+import Caret from '../components/caret.js'
+
+
 const Explanation = ({
   chapterTitle,
   headline,
@@ -24,7 +27,7 @@ const Explanation = ({
             <a className="button solid" href={mainCtaLink}>{mainCtaText}</a>
           : "" }
           {(secondaryCtaLink && secondaryCtaText) ?
-            <a className="button bare" href={secondaryCtaLink}>{secondaryCtaText}</a>
+            <a className="button bare" href={secondaryCtaLink}>{secondaryCtaText} <Caret /></a>
           : ""}
         </section>
       </div>

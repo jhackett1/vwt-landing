@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Caret from '../components/caret.js'
+
 const Hero = ({
   headline,
   strapline,
@@ -20,7 +22,7 @@ const Hero = ({
           <a className="button gradient" href={mainCtaLink}>{mainCtaText}</a>
         : "" }
         {(secondaryCtaLink && secondaryCtaText) ?
-          <a className="button outline" href={secondaryCtaLink}>{secondaryCtaText}</a>
+          <a className="button outline" href={secondaryCtaLink}>{secondaryCtaText}<Caret /></a>
         : ""}
       </nav>
     </div>
