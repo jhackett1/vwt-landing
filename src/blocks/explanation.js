@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Caret from '../components/caret.js'
 
+import Caret from '../components/caret.js'
 
 const Explanation = ({
   chapterTitle,

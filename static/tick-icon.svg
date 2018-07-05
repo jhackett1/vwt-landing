@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="142px" height="142px" viewBox="0 0 142 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 13</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="50" cy="50" r="50"></circle>
+        <filter x="-32.0%" y="-32.0%" width="164.0%" height="164.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.106336806   0 0 0 0 0.396382723   0 0 0 0 1  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Innovation-/-Icon" transform="translate(21.000000, 21.000000)">
+            <g id="Group-13">
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use stroke="#003585" stroke-width="1" fill-opacity="0" fill="#0F0443" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Group-58" transform="translate(9.000000, 9.000000)" fill="#FFD770">
+                    <circle id="Oval-3" cx="41" cy="1" r="1"></circle>
+                    <circle id="Oval-3" cx="41" cy="81" r="1"></circle>
+                    <circle id="Oval-3" cx="41" cy="1" r="1"></circle>
+                    <circle id="Oval-3" cx="41" cy="81" r="1"></circle>
+                    <circle id="Oval-3" transform="translate(51.352762, 2.362967) rotate(-345.000000) translate(-51.352762, -2.362967) " cx="51.3527618" cy="2.36296695" r="1"></circle>
+                    <circle id="Oval-3" transform="translate(30.647238, 79.637033) rotate(-345.000000) translate(-30.647238, -79.637033) " cx="30.6472382" cy="79.6370331" r="1"></circle>
+                    <circle id="Oval-3" transform="translate(61.000000, 6.358984) rotate(-330.000000) translate(-61.000000, -6.358984) " cx="61" cy="6.35898385" r="1"></circle>
+                    <circle id="Oval-3" transform="translate(21.000000, 75.641016) rotate(-330.000000) translate(-21.000000, -75.641016) " cx="21" cy="75.6410162" r="1"></circle>
+                    <circle id="Oval-3" transform="translate(69.284271, 12.715729) rotate(-315.000000) translate(-69.284271, -12.715729) " cx="69.2842712" cy="12.7157288" r="1"></circle>
+                    <circle id="Oval-3" transform="translate(12.715729, 69.284271) rotate(-315.000000) translate(-12.715729, -69.284271) " cx="12.7157288" cy="69.2842712" r="1"></circle>
+                    <circle id="Oval-3" transform="translate(75.641016, 21.000000) rotate(-300.000000) translate(-75.641016, -21.000000) " cx="75.6410162" cy="21" r="1"></circle>
+                    <circle id="Oval-3" transform="translate(6.358984, 61.000000) rotate(-300.000000) translate(-6.358984, -61.000000) " cx="6.35898385" cy="61" r="1"></circle>
+                    <circle id="Oval-3" transform="translate(79.637033, 30.647238) rotate(-285.000000) translate(-79.637033, -30.647238) " cx="79.6370331" cy="30.6472382" r="1"></circle>
+                    <circle id="Oval-3" transform="translate(2.362967, 51.352762) rotate(-285.000000) translate(-2.362967, -51.352762) " cx="2.36296695" cy="51.3527618" r="1"></circle>
+                    <circle id="Oval-3" transform="translate(81.000000, 41.000000) rotate(-270.000000) translate(-81.000000, -41.000000) " cx="81" cy="41" r="1"></circle>
+                    <circle id="Oval-3" transform="translate(1.000000, 41.000000) rotate(-270.000000) translate(-1.000000, -41.000000) " cx="1" cy="41" r="1"></circle>
+                </g>
+                <polyline id="Shape" stroke="#FFFFFF" stroke-width="3" fill-rule="nonzero" points="60.3057271 40.6 47.018128 54.6794837 40 48.8607743"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,4 +1,5 @@
 import React from 'react'
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const SellingPoints = ({
   chapterTitle,
@@ -9,7 +10,8 @@ const SellingPoints = ({
   point2Heading,
   point2Body,
   point3Heading,
-  point3Body
+  point3Body,
+  icon
  }) => (
   <section className="block selling-points">
     <div className="container">
@@ -19,18 +21,27 @@ const SellingPoints = ({
         <ul className="selling-points">
         {(point1Heading && point1Body) ?
           <li>
+            <ScrollAnimation animateIn="pulse" duration={0.5} initiallyVisible={true}>
+              <img src={icon}/>
+            </ScrollAnimation>
             <h3>{point1Heading}</h3>
             <p>{point1Body}</p>
           </li>
         : ""}
         {(point2Heading && point2Body) ?
           <li>
+            <ScrollAnimation animateIn="pulse" duration={0.5} initiallyVisible={true}>
+               <img src={icon}/>
+            </ScrollAnimation>
             <h3>{point2Heading}</h3>
             <p>{point2Body}</p>
           </li>
         : ""}
         {(point3Heading && point3Body) ?
           <li>
+            <ScrollAnimation animateIn="pulse" duration={0.5} initiallyVisible={true}>
+              <img src={icon}/>
+            </ScrollAnimation>
             <h3>{point3Heading}</h3>
             <p>{point3Body}</p>
           </li>

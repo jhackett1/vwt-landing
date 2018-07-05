@@ -9,11 +9,11 @@ const Hero = ({
   mainCtaLink,
   secondaryCtaText,
   secondaryCtaLink,
-  logo,
-  background
+  background,
+  children
 }) => (
   <section className="block hero">
-    {(logo) ? <img className="logo" src={logo}/> : ""}
+    {children}
     <div className="container">
       {(strapline)? <p className="strapline">{strapline}</p> : ""}
       <h1>{headline}</h1>

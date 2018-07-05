@@ -1,4 +1,5 @@
 import React from 'react'
+import ScrollAnimation from 'react-animate-on-scroll';
 
 import Caret from '../components/caret.js'
 
@@ -56,7 +57,7 @@ export default class Tabs extends React.Component{
                       {(this.props.tabContent[i]) ? this.props.tabContent[i].map((contentItem, j)=>(
                         <li key={j} className="tab-content-item">
                           <span className="label">{this.props.tabContentLabels[j]}</span>
-                          <span className="value">{contentItem}</span>
+                            <span className="value">{contentItem}</span>
                         </li>
                       )): ""}
                     </ul>

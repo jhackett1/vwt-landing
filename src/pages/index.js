@@ -17,10 +17,18 @@ import SignUp from '../blocks/sign-up'
 import Faq from '../blocks/faq'
 import Footer from '../blocks/footer'
 
-// Static assets
+// Import images, icons and logos
 import logo from '../../static/logo.svg'
 import logoDark from '../../static/logo-blue.svg'
 import logoSmall from '../../static/logo-small.svg'
+import animatedRing from '../../static/animated-ring.svg'
+import tickIcon from '../../static/tick-icon.svg'
+import aceIcon from '../../static/ace-icon.svg'
+import glassesIcon from '../../static/gov-icon.svg'
+import govIcon from '../../static/gov-icon.svg'
+import software1 from '../../static/software-1.svg'
+import software2 from '../../static/software-2.svg'
+import software3 from '../../static/software-3.svg'
 
 // The page layout
 const IndexPage = ({data}) => (
@@ -36,6 +44,9 @@ const IndexPage = ({data}) => (
       menuLinks={[
         '#', '#', '#'
       ]}
+      organisationTwitter="#"
+      organisationLinkedin="#"
+      organisationFacebook="#"
       />
 
     <Hero
@@ -45,7 +56,10 @@ const IndexPage = ({data}) => (
       mainCtaText="Buy tokens"
       secondaryCtaLink="#"
       secondaryCtaText="Whitepaper"
-      />
+
+      >
+        <img className="animated-ring" src={animatedRing}/>
+    </Hero>
 
     <Logos
       logos={['logo1.jpg', 'logo2.jpg', 'logo3.jpg', 'logo4.jpg', 'logo5.jpg', 'logo6.jpg']}
@@ -53,8 +67,8 @@ const IndexPage = ({data}) => (
 
     <Explanation
       chapterTitle="The opportunity"
-      image="/counters.png"
-      imageAlt="Counters"
+      image="/tokens.svg"
+      imageAlt="Tokens"
       headline="Tapping into the $51.4BN online gaming industry with Blockchain Technology."
       body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem. Aut voluptatem corporis placeat veritatis autem consequuntur architecto. Expedita natus ratione praesentium."
       mainCtaLink="#"
@@ -66,6 +80,7 @@ const IndexPage = ({data}) => (
     <SellingPoints
       chapterTitle="Innovation"
       headline="Our bespoke protocol is specifically built to serve the needs of the on-chain gambling industry."
+      icon={tickIcon}
       point1Heading="High speed transactions"
       point1Body="Et voluptatem quaerat nam voluptatem."
       point2Heading="Low fees"
@@ -77,10 +92,13 @@ const IndexPage = ({data}) => (
     <SellingPointsAlt
       chapterTitle="Benefits"
       headline="Designed to benefit players, developers and governments."
+      point1Icon={aceIcon}
       point1Heading="Players"
       point1Body="Et voluptatem quaerat nam voluptatem. Et nam voluptatem."
+      point2Icon={glassesIcon}
       point2Heading="Developers"
       point2Body="Iure ducimus odit neque. Et voluptatem quaerat nam voluptatem."
+      point3Icon={govIcon}
       point3Heading="Governments"
       point3Body="Expedita natus ratione praesentium. Et voluptatem quaerat nam voluptatem."
       />
@@ -201,7 +219,7 @@ const IndexPage = ({data}) => (
       chapterTitle="Roadmap"
       milestones={{
         checked: [
-          true, true, true, true, true, true, false, false, false, false, false, false
+          true, true, true, true, true, true, false, true, false, false, false, false
         ],
         dates: [
           'Aug 2017', 'Sep 2017', 'Oct 2017', 'Nov 2017', 'Dec 2017', 'Jan 2018', 'Feb 2018', 'Mar 2018', 'Aug 2018', 'Aug 2018', 'Aug 2018', 'Aug 2018',
@@ -214,7 +232,7 @@ const IndexPage = ({data}) => (
 
     <Explanation
       chapterTitle="The opportunity"
-      image="/cards.png"
+      image="/cards.svg"
       imageAlt="Cards"
       headline="We can launch your online gaming platform at a fraction of the cost."
       body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem. Aut voluptatem corporis placeat veritatis autem consequuntur architecto. Expedita natus ratione praesentium."
@@ -227,9 +245,7 @@ const IndexPage = ({data}) => (
       headline="The Software Suite."
       products={{
         images: [
-          'http://placehold.it/200x200',
-          'http://placehold.it/200x200',
-          'http://placehold.it/200x200',
+          software1, software2, software3
         ],
         names: [
           'Whitelabel Casino',
@@ -248,7 +264,7 @@ const IndexPage = ({data}) => (
       headline="Keep in the loop"
       body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem."
       >
-      hello
+      Form HTML goes here
     </SignUp>
 
     <Faq

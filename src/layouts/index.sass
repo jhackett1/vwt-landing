@@ -12,6 +12,9 @@ $lightest: #ffffff
 $max-width: 1100px
 $font-stack: Roboto, sans-serif
 
+// Keep track of how tall the header is, to accurately align other page elements
+$header-height: 52px
+
 // Animations
 @keyframes glisten
   0%
@@ -76,6 +79,10 @@ $font-stack: Roboto, sans-serif
   font-size: 0.8em
   text-decoration: none
   text-align: center
+  &:hover
+    filter: brightness(1.1)
+  &:active
+    filter: brightness(0.8)
   &.solid
     background-color: $brand
     color: $lightest
@@ -125,7 +132,7 @@ ul.selling-points
       font-weight: 300
 
 .header + .block
-  margin-top: 52px
+  margin-top: $header-height
 
 // Header
 .block.header
@@ -139,7 +146,7 @@ ul.selling-points
   align-items: center
   z-index: 999
   top: 0
-  div
+  .inner
     display: flex
     flex-direction: row
     align-items: center
@@ -149,7 +156,7 @@ ul.selling-points
     width: auto
   .frost-cover
     position: fixed
-    top: 52px
+    top: $header-height
     left: 0
     right: 0
     bottom: 0
@@ -175,7 +182,7 @@ ul.selling-points
     max-width: 100%
     width: 300px
     background-color: $brand
-    top: 52px
+    top: $header-height
     left: 0
     bottom: 0px
     visibility: hidden
@@ -194,6 +201,21 @@ ul.selling-points
         a
           color: $lightest
           text-decoration: none
+    .organisation-social-links
+      display: flex
+      flex-direction: row
+      justify-content: center
+      width: 100%
+      margin-top: 20px
+      a
+        display: inline-block
+        width: 50px
+        padding: 8px
+        text-decoration: none
+        text-align: center
+        margin-right: 10px
+        background-color: $brand
+        color: $lightest
   .menu-toggle
     margin-right: 15px
     cursor: pointer
@@ -203,6 +225,7 @@ ul.selling-points
   background-color: $brand
   text-align: center
   padding: 70px 40px
+  min-height: calc(100vh - #{$header-height})
   .strapline
     @include gradient
     -webkit-background-clip: text
@@ -230,10 +253,13 @@ ul.selling-points
     grid-row-gap: 50px
   img
     filter: grayscale(1)
-    text-align: center
+    display: block
     margin: 0 auto
     margin-bottom: 0px
     max-width: 100%
+    transition: 0.1s ease-in
+    &:hover
+      filter: grayscale(0) brightness(1.1)
 
 // Explanation block
 .block.explanation
@@ -249,7 +275,10 @@ ul.selling-points
     margin-bottom: 40px
   img
     max-width: 100%
-    margin-bottom: 20px
+    margin: 0 auto 20px auto
+    padding: 0px 50px
+    display: block
+
   section.buttons
     text-align: center
     .button
@@ -281,6 +310,13 @@ ul.selling-points
     font-weight: 300
     text-align: center
     margin-bottom: 40px
+  .selling-points
+    li
+      margin-bottom: 50px
+    img
+      max-width: 90px
+      height: auto
+      margin-bottom: 20px
 
 // Tabs
 .block.tabs
@@ -620,8 +656,12 @@ ul.selling-points
     margin-bottom: 40px
     .milestone
       position: relative
+      svg
+        stroke: $gradient-light
       &.checked::before
         border-color: $gradient-light !important
+
+      // First path segment
       &:first-of-type::before
         content: ""
         display: block
@@ -631,10 +671,12 @@ ul.selling-points
         position: absolute
         width: 100%
         z-index: 1
-      &:nth-of-type(2)::after, &:nth-of-type(6)::after, &:nth-of-type(10)::after
+
+      // Curved paths on right
+      &:nth-of-type(4)::before, &:nth-of-type(8)::before, &:nth-of-type(12)::before
         position: absolute
         left: 50%
-        top: 17px
+        bottom: 97px
         content: ""
         display: block
         height: 192px
@@ -643,10 +685,12 @@ ul.selling-points
         border-top-right-radius: 192px
         border: 1px solid $brand-accent2
         border-left: 0
-      &:nth-of-type(3)::after, &:nth-of-type(7)::after
+
+      // Curved paths on left
+      &:nth-of-type(5)::before, &:nth-of-type(9)::before
         position: absolute
         right: 50%
-        top: 17px
+        bottom: 97px
         content: ""
         display: block
         height: 192px
@@ -655,6 +699,30 @@ ul.selling-points
         border-top-left-radius: 192px
         border: 1px solid $brand-accent2
         border-right: 0
+
+      // Horizontal connecting paths, right-to-left
+      &:nth-of-type(2)::before, &:nth-of-type(6)::before, &:nth-of-type(10)::before
+        content: ""
+        display: block
+        border-bottom: 1px solid $brand-accent2
+        right: 50%
+        top: 17px
+        position: absolute
+        width: 104%
+        z-index: 1
+
+      // Horizontal connecting path, left ro right
+      &:nth-of-type(3)::before, &:nth-of-type(7)::before, &:nth-of-type(11)::before
+        content: ""
+        display: block
+        border-bottom: 1px solid $brand-accent2
+        left: 50%
+        top: 17px
+        position: absolute
+        width: 104%
+        z-index: 1
+
+      // Final path segment
       &:nth-of-type(11)::after
         content: ""
         display: block
@@ -663,15 +731,6 @@ ul.selling-points
         top: 17px
         position: absolute
         width: 100%
-        z-index: 1
-      &:nth-of-type(even)::before
-        content: ""
-        display: block
-        border-bottom: 1px solid $brand-accent2
-        right: 50%
-        top: 17px
-        position: absolute
-        width: 104%
         z-index: 1
 
       h5
@@ -723,8 +782,10 @@ ul.selling-points
           padding-left: 40px
           margin-bottom: 20px
           font-size: 0.9em
-          &::before
+          svg.icon
             position: absolute
+            stroke: $gradient-light
+            padding: 5px
             left: 0
             border-radius: 100%
             content: ""

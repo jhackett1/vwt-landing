@@ -1,12 +1,17 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
+// Get library CSS
+import 'animate.css/animate.min.css'
+
+// Get our SASS
 import './index.sass'
+import '../pages/custom.sass'
 
 const Layout = ({ children, data }) => (
   <main role="main">
-  <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
