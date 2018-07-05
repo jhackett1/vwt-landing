@@ -253,10 +253,44 @@ const IndexPage = ({data}) => (
 
     <Faq
       chapterTitle="FAQ"
+      tabNames={["Coin", "Account", "Security", "Team", "Legal"]}
+      tabQuestions={[
+        ["What is VWT?", "Is VWT a utility token?", "Why should I use VWT?"],
+        ["Is VWT secure?", "How can I buy and sell VWT?", "Why should I use VWT?"],
+        ["What is VWT?", "Is VWT a utility token?", "Why should I use VWT?"],
+      ]}
+      tabAnswers={[
+        [
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
+        ],
+        [
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
+        ],
+        [
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
+          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
+        ],
+      ]}
+      subheadline="Can't find your answer?"
+      body="Our team is dedicated to answer your questions within 24 hours. How can we help?"
+      mainCtaLink="#"
+      mainCtaText="Email us"
+      secondaryCtaLink="#"
+      secondaryCtaText="Subscribe to our newsletter"
       />
 
     <Footer
-      siteTitle="Varius World Tech ICO"
+      logo={logoDark}
+      organisationName="Varius World Tech ICO"
+      organisationContact="3rd Floor, 232 Bishopsgate · 0777 777 7777 · info@test.com"
+      organisationTwitter="#"
+      organisationLinkedin="#"
+      organisationFacebook="#"
       />
 
   </div>

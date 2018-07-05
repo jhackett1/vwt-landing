@@ -1,8 +1,13 @@
 import React from 'react'
 
+import Tabs from '../components/tabs'
+import Caret from '../components/caret'
+
 const Faq = ({
   chapterTitle,
-  tabs,
+  tabNames,
+  tabQuestions,
+  tabAnswers,
   subheadline,
   body,
   mainCtaLink,
@@ -14,15 +19,17 @@ const Faq = ({
     <div className="container">
       {(chapterTitle)? <span className="chapter-title">{chapterTitle}</span>: "" }
       <div className="grid">
-        {(tabs)? <Tabs data={tabs} /> : ""}
+        {(tabNames && tabQuestions && tabAnswers)?
+          <Tabs tabNames={tabNames} tabQuestions={tabQuestions} tabAnswers={tabAnswers} />
+        : ""}
         <section className="get-more-help">
           {(subheadline)? <h3>{subheadline}</h3> : "" }
-          {(body)? <h3>{body}</h3> : "" }
+          {(body)? <p>{body}</p> : "" }
           {(mainCtaLink && mainCtaText) ?
-            <a className="button gradient" href={mainCtaLink}>{mainCtaText}</a>
+            <a className="button solid" href={mainCtaLink}>{mainCtaText}</a>
           : "" }
           {(secondaryCtaLink && secondaryCtaText) ?
-            <a className="button outline" href={secondaryCtaLink}>{secondaryCtaText}<Caret /></a>
+            <a className="button bare" href={secondaryCtaLink}>{secondaryCtaText}<Caret /></a>
           : ""}
         </section>
       </div>

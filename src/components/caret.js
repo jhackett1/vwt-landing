@@ -1,7 +1,11 @@
 import React from 'react'
 
-const Caret = () => (
-  <svg width="6px" height="8px" viewBox="0 0 6 8" version="1.1">
+const Caret = ({
+  down
+}) => (
+  <svg width="6px" height="8px" viewBox="0 0 6 8" version="1.1" style={{
+    transform: (down)? "rotate(90deg)" : ""
+  }}>
     <defs>
       <polygon id="path-rkk" points="0.6107 6.66 1.868 7.92 5.8278 3.96 1.868 0 0.6107 1.26 3.3133 3.96"></polygon>
     </defs>
