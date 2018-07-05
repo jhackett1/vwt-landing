@@ -14,6 +14,8 @@ import Events from '../blocks/events'
 import Roadmap from '../blocks/roadmap'
 import Products from '../blocks/products'
 import SignUp from '../blocks/sign-up'
+import Faq from '../blocks/faq'
+import Footer from '../blocks/footer'
 
 // Static assets
 import logo from '../../static/logo.svg'
@@ -242,12 +244,20 @@ const IndexPage = ({data}) => (
       }}
       />
 
-  <SignUp
-    headline="Keep in the loop"
-    body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem."
-    >
-    hello
+    <SignUp
+      headline="Keep in the loop"
+      body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem."
+      >
+      hello
     </SignUp>
+
+    <Faq
+      chapterTitle="FAQ"
+      />
+
+    <Footer
+      siteTitle="Varius World Tech ICO"
+      />
 
   </div>
 )
