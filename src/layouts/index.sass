@@ -9,6 +9,14 @@
   100%
     background-position: 0% 50%
 
+@keyframes fadeInUp
+  0%
+    opacity: 0
+    transform: translateY(10%)
+  100%
+    opacity: 1
+    transform: translateY(0%)
+
 // Mixins
 @mixin gradient
   background: #c09a4b
@@ -16,6 +24,12 @@
   background: -webkit-linear-gradient(45deg, $gradient-dark 0%,$gradient-light 50%,$gradient-dark 100%)
   background: linear-gradient(45deg, $gradient-dark 0%,$gradient-light 50%,$gradient-dark 100%)
   animation: glisten 1s ease infinite
+
+@mixin labelText
+  text-transform: uppercase
+  letter-spacing: 1px
+  font-size: 0.9em
+  font-weight: 600
 
 @mixin card
   .inner-text
@@ -124,6 +138,15 @@ form input
   margin-bottom: 15px
   transform: translateY(1.5px)
 
+.slick-dots
+  li
+    transition: 0.1s ease-in
+    button::before
+      color: $brand
+    &.slick-active
+      transform: scale(2)
+      button::before
+        color: $brand
 
 
 .button + .button.bare
@@ -320,6 +343,7 @@ form input
       &.selected
         display: block
         visibility: visible
+        animation: fadeInUp 0.4s ease-in
       ul.tab-content
         list-style-type: none
         display: grid

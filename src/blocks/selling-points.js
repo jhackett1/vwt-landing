@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import ScrollAnimation from 'react-animate-on-scroll'
 
 const SellingPoints = ({
@@ -53,3 +55,15 @@ const SellingPoints = ({
 )
 
 export default SellingPoints
+
+SellingPoints.propTypes = {
+  id: PropTypes.string,
+  chapterTitle: PropTypes.string.isRequired,
+  headline: PropTypes.string.isRequired,
+  point1Heading: PropTypes.string,
+  point1Body: PropTypes.string,
+  point2Heading: PropTypes.string,
+  point2Body: PropTypes.string,
+  point3Heading: PropTypes.string,
+  point3Body: PropTypes.string
+}

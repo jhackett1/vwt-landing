@@ -9,7 +9,7 @@ const Caret = ({
     <defs>
       <polygon id="path-rkk" points="0.6107 6.66 1.868 7.92 5.8278 3.96 1.868 0 0.6107 1.26 3.3133 3.96"></polygon>
     </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-3812.000000, -648.000000)" id="Group-4436">
         <g transform="translate(3812.000000, 648.000000)">
           <mask id="mask-rkk" fill="white">

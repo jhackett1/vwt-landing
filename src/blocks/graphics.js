@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ChartistGraph from 'react-chartist'
 import ScrollAnimation from 'react-animate-on-scroll'
 import MarkdownIt from 'markdown-it'
@@ -8,7 +9,6 @@ import './chartist.css'
 
 const Graphics = ({
   id,
-  chapterTitle,
   headline,
   body,
   chart1Title,
@@ -67,3 +67,17 @@ const Graphics = ({
 )
 
 export default Graphics
+
+Graphics.propTypes = {
+  id: PropTypes.string,
+  headline: PropTypes.string.isRequired,
+  body: PropTypes.string,
+  chart1Title: PropTypes.string,
+  chart1Data: PropTypes.object.isRequired,
+  chart1Options: PropTypes.object,
+  chart1Type: PropTypes.string.isRequired,
+  chart2Title: PropTypes.string,
+  chart2Data: PropTypes.object.isRequired,
+  chart2Options: PropTypes.object,
+  chart2Type: PropTypes.string.isRequired
+}

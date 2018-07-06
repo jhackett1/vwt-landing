@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import ScrollAnimation from 'react-animate-on-scroll';
 import MarkdownIt from 'markdown-it'
 let md = new MarkdownIt({ html: true });
@@ -84,4 +86,18 @@ export default class Tabs extends React.Component{
       </section>
     )
   }
+}
+
+Tabs.propTypes = {
+  icon: PropTypes.string,
+  headline: PropTypes.string.isRequired,
+  body: PropTypes.string,
+  tabNames: PropTypes.array.isRequired,
+  tabDescriptions: PropTypes.array.isRequired,
+  tabContentLabels: PropTypes.array.isRequired,
+  tabContent: PropTypes.array,
+  mainCtaLink: PropTypes.string,
+  mainCtaText: PropTypes.string,
+  secondaryCtaLink: PropTypes.string,
+  secondaryCtaText: PropTypes.string
 }

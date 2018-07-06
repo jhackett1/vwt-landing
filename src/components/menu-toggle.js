@@ -6,7 +6,7 @@ const MenuToggle = ({onClick}) => (
           <polygon id="path-1" points="0 0 20 0 20 2 0 2"></polygon>
           <polygon id="path-3" points="0 0 20 0 20 2 0 2"></polygon>
       </defs>
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
           <g id="Group">
               <g id="Group-2056">
                   <mask id="mask-2" fill="white">

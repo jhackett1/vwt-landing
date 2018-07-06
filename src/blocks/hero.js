@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Caret from '../components/caret.js'
 
@@ -31,3 +32,15 @@ const Hero = ({
 )
 
 export default Hero
+
+Hero.propTypes = {
+  id: PropTypes.string,
+  headline: PropTypes.string.isRequired,
+  strapline: PropTypes.string,
+  mainCtaText: PropTypes.string,
+  mainCtaLink: PropTypes.string,
+  secondaryCtaText: PropTypes.string,
+  secondaryCtaLink: PropTypes.string,
+  background: PropTypes.string,
+  children: PropTypes.node
+}

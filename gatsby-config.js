@@ -1,3 +1,9 @@
+// ======================================
+// GATSBY-CONFIG.JS
+// Change site title, Google Web Fonts,
+// favicon and GA tracking ID here
+// ======================================
+
 module.exports = {
   siteMetadata: {
     title: 'The Future of Online Gaming',

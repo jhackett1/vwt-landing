@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import MarkdownIt from 'markdown-it'
 let md = new MarkdownIt({ html: true });
 
@@ -38,3 +39,17 @@ const Explanation = ({
 )
 
 export default Explanation
+
+Explanation.propTypes = {
+  id: PropTypes.string,
+  chapterTitle: PropTypes.string.isRequired,
+  headline: PropTypes.string.isRequired,
+  body: PropTypes.string,
+  reversed: PropTypes.bool,
+  mainCtaText: PropTypes.string,
+  mainCtaLink: PropTypes.string,
+  secondaryCtaText: PropTypes.string,
+  secondaryCtaLink: PropTypes.string,
+  image: PropTypes.string,
+  imageAlt: PropTypes.string
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import MarkdownIt from 'markdown-it'
 let md = new MarkdownIt({ html: true });
 
@@ -41,3 +42,17 @@ const Faq = ({
 )
 
 export default Faq
+
+Faq.propTypes = {
+  id: PropTypes.string,
+  chapterTitle: PropTypes.string.isRequired,
+  tabNames: PropTypes.array.isRequired,
+  tabQuestions: PropTypes.array.isRequired,
+  tabAnswers: PropTypes.array.isRequired,
+  subheadline: PropTypes.string,
+  body: PropTypes.string,
+  mainCtaLink: PropTypes.string,
+  mainCtaText: PropTypes.string,
+  secondaryCtaLink: PropTypes.string,
+  secondaryCtaText: PropTypes.string
+}

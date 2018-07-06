@@ -1,5 +1,6 @@
 import React from 'react'
 import * as Fa from 'react-icons/lib/fa'
+import PropTypes from 'prop-types'
 
 const Footer = ({
   id,
@@ -52,3 +53,15 @@ const Footer = ({
 )
 
 export default Footer
+
+Footer.propTypes = {
+  id: PropTypes.string,
+  logo: PropTypes.string,
+  organisationName: PropTypes.string,
+  organisationContact: PropTypes.string,
+  organisationTwitter: PropTypes.string,
+  organisationLinkedin: PropTypes.string,
+  organisationFacebook: PropTypes.string,
+  menu: PropTypes.object,
+  children: PropTypes.node
+}

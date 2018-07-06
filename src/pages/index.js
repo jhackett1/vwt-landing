@@ -1,6 +1,12 @@
+// ====================================
+// INDEX.JS
+// Edit layout and content in this file
+// ====================================
+
 import React from 'react'
 
-// Blocks we will use
+// BLOCKS
+// Import each block you wish to use
 import Header from '../blocks/header'
 import Hero from '../blocks/hero'
 import Logos from '../blocks/logos'
@@ -17,7 +23,8 @@ import SignUp from '../blocks/sign-up'
 import Faq from '../blocks/faq'
 import Footer from '../blocks/footer'
 
-// Import images, icons and logos
+// IMAGES
+// Import images, icons and logos you wish to use
 import logo from '../../static/logo.svg'
 import logoDark from '../../static/logo-blue.svg'
 import logoGold from '../../static/logo-gold.svg'
@@ -39,7 +46,8 @@ import pressLogo6 from '../../static/logo6.jpg'
 import cards from '../../static/cards.png'
 import tokens from '../../static/tokens.png'
 
-// The page layout
+// LAYOUT AND CONTENT
+// Arrange your blocks and insert content into each one
 const IndexPage = ({data}) => (
   <div>
 
@@ -76,7 +84,7 @@ const IndexPage = ({data}) => (
       />
 
     <Explanation
-      reversed
+      reversed={true}
       chapterTitle="The opportunity"
       image={tokens}
       imageAlt="Tokens"
@@ -214,7 +222,7 @@ const IndexPage = ({data}) => (
       />
 
     <Events
-      chapterTitle="Events"
+      chapterTitle={["Events"]}
       headline="Discover the VWT ecosystem for yourself"
       upcomingEvents={{
         images: [
@@ -308,7 +316,7 @@ const IndexPage = ({data}) => (
       headline="Join our mailing list"
       body="We’re on our way to becoming the innovation and technology partner of choice for the entire online gaming industry. Subscribe now to receive updates and join our revolution. "
       >
-      <form form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post">
+      <form form action="https://app.getresponse.com/add_subscriber.html" acceptCharset="utf-8" method="post">
           <input type="email" className="form-control" id="email-subscribe" aria-describedby="subscribe" name="email" placeholder="Enter Email Address" required/>
           <input type="hidden" name="campaign_token" value="6m35J" />
           <button type="submit" className="button outline">Subscribe</button>
@@ -365,7 +373,7 @@ const IndexPage = ({data}) => (
         ]
       }}
       >
-      <form form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post">
+      <form form action="https://app.getresponse.com/add_subscriber.html" acceptCharset="utf-8" method="post">
           <input type="email" className="form-control" id="email-subscribe" aria-describedby="subscribe" name="email" placeholder="Enter Email Address" required/>
           <input type="hidden" name="campaign_token" value="6m35J" />
           <button type="submit" className="button outline">Subscribe</button>

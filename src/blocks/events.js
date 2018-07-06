@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import * as Fa from 'react-icons/lib/fa'
 import Slider from "react-slick";
 import MediaQuery from 'react-responsive';
@@ -98,3 +99,15 @@ const Events = ({
 )
 
 export default Events
+
+Events.propTypes = {
+  id: PropTypes.string,
+  chapterTitle: PropTypes.string.isRequired,
+  headline: PropTypes.string.isRequired,
+  upcomingEvents: PropTypes.object.isRequired,
+  laterEvents: PropTypes.object,
+  subheadline: PropTypes.string,
+  body: PropTypes.string,
+  ctaLink: PropTypes.string,
+  ctaText: PropTypes.string
+}

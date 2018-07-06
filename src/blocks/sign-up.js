@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import MarkdownIt from 'markdown-it'
 let md = new MarkdownIt({ html: true });
 
@@ -18,3 +20,10 @@ const SignUp = ({
 )
 
 export default SignUp
+
+SignUp.propTypes = {
+  id: PropTypes.string,
+  headline: PropTypes.string.isRequired,
+  body: PropTypes.string,
+  children: PropTypes.node
+}

@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import * as Fa from 'react-icons/lib/fa'
 import Slider from "react-slick";
 import MediaQuery from 'react-responsive';
@@ -17,7 +19,7 @@ var settings = {
 var bigSettings = {
   initialSlide: 1,
   slidesToShow: 2,
-  slidesToScroll: 2,
+  slidesToScroll: 1,
   centerPadding: "30px"
 };
 
@@ -39,7 +41,7 @@ const Team = ({
         <MediaQuery minWidth="800px">
           <Slider className="team-members" {...settings} {...bigSettings}>
             {teamMembers.names.map((teamMemberName, i)=>(
-              <li className="team-member">
+              <li className="team-member" key={i}>
                 <img alt={teamMemberName} src={teamMembers.images[i]}/>
                 <h3>{teamMemberName}</h3>
                 <h5>{teamMembers.titles[i]}</h5>
@@ -56,7 +58,7 @@ const Team = ({
         <MediaQuery maxWidth="800px">
           <Slider className="team-members" {...settings}>
             {teamMembers.names.map((teamMemberName, i)=>(
-              <li className="team-member">
+              <li className="team-member" key={i}>
                 <img alt={teamMemberName} src={teamMembers.images[i]}/>
                 <h3>{teamMemberName}</h3>
                 <h5>{teamMembers.titles[i]}</h5>
@@ -78,3 +80,10 @@ const Team = ({
 )
 
 export default Team
+
+Team.propTypes = {
+  id: PropTypes.string,
+  chapterTitle: PropTypes.string.isRequired,
+  headline: PropTypes.string.isRequired,
+  teamMembers: PropTypes.object.isRequired
+}

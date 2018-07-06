@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import * as Fa from 'react-icons/lib/fa'
 import Link from 'gatsby-link'
 import Scrollchor from 'react-scrollchor';
@@ -76,4 +77,16 @@ export default class Header extends React.Component{
       </header>
     )
   }
+}
+
+Header.propTypes = {
+  id: PropTypes.string,
+  ctaLink: PropTypes.string,
+  ctaText: PropTypes.string,
+  logo: PropTypes.string,
+  menuText: PropTypes.array,
+  menuLinks: PropTypes.array,
+  organisationTwitter: PropTypes.string,
+  organisationLinkedin: PropTypes.string,
+  organisationFacebook: PropTypes.string,
 }
