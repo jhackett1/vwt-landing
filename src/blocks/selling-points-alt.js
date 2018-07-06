@@ -5,7 +5,6 @@ const SellingPointsAlt = ({
   id,
   chapterTitle,
   headline,
-  body,
   point1Icon,
   point1Heading,
   point1Body,

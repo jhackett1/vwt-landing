@@ -81,7 +81,7 @@ const IndexPage = ({data}) => (
       image={tokens}
       imageAlt="Tokens"
       headline="By offering Blockchain technology exclusively for the online gaming industry, the odds are firmly in our favour."
-      body="We’re ahead of the game because we’re using Blockchain to disrupt the global online gaming industry, currently valued in excess of USD 480 billion annually. Our VWT protocol will redefine the way online casinos interact with their clients, by creating a decentralised ecosystem that makes transactions faster, safer and more cost-effective. There are now no limits to what the online gaming world can achieve."
+      body="We’re ahead of the game because we’re using Blockchain to disrupt the global online gaming industry, currently valued in excess of USD 480 billion annually. Our VWT protocol will redefine the way online casinos interactwith their clients, by creating a decentralised ecosystem that makes transactions faster, safer and more cost-effective.</p> <p>There are now no limits to what the online gaming world can achieve."
       mainCtaLink="#"
       mainCtaText="Buy tokens"
       secondaryCtaLink="#"

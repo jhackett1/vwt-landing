@@ -5,7 +5,6 @@ const SellingPoints = ({
   id,
   chapterTitle,
   headline,
-  body,
   point1Heading,
   point1Body,
   point2Heading,

@@ -1,4 +1,6 @@
 import React from 'react'
+import MarkdownIt from 'markdown-it'
+let md = new MarkdownIt({ html: true });
 
 const Products = ({
   id,
@@ -9,7 +11,7 @@ const Products = ({
   <section className="block products" id={(id)? id : ""}>
     <div className="container">
       {(headline)? <h2 className="headline">{headline}</h2>: "" }
-      {(body)? <p>{body}</p>: "" }      
+      {(body)? <p dangerouslySetInnerHTML={{ __html: md.render(body) }}></p>: "" }
       {(products)?
         <ul className="products-list">
           {products.names.map((productName, i)=>(

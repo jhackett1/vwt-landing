@@ -1,4 +1,6 @@
 import React from 'react'
+import MarkdownIt from 'markdown-it'
+let md = new MarkdownIt({ html: true });
 
 import Tabs from '../components/tabs'
 import Caret from '../components/caret'
@@ -25,7 +27,7 @@ const Faq = ({
         : ""}
         <section className="get-more-help">
           {(subheadline)? <h3>{subheadline}</h3> : "" }
-          {(body)? <p>{body}</p> : "" }
+          {(body)? <p dangerouslySetInnerHTML={{ __html: md.render(body) }}></p> : "" }
           {(mainCtaLink && mainCtaText) ?
             <a className="button solid" href={mainCtaLink}>{mainCtaText}</a>
           : "" }

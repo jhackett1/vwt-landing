@@ -2,9 +2,12 @@ import React from 'react'
 import * as Fa from 'react-icons/lib/fa'
 import Slider from "react-slick";
 import MediaQuery from 'react-responsive';
+import MarkdownIt from 'markdown-it'
 
 import Caret from '../components/caret'
 import LaterEvents from '../components/later-events'
+
+let md = new MarkdownIt({ html: true });
 
 var settings = {
   dots: true,
@@ -86,7 +89,7 @@ const Events = ({
         <LaterEvents laterEvents={laterEvents} className="later-events"/>
       : ""}
       {(subheadline)? <h3 className="headline">{subheadline}</h3>: "" }
-      {(body)? <p>{body}</p>: "" }
+      {(body)? <p dangerouslySetInnerHTML={{ __html: md.render(body) }}></p>: "" }
       {(ctaLink && ctaText) ?
         <a className="button solid" href={ctaLink}>{ctaText}</a>
       : "" }
