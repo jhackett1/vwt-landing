@@ -15,6 +15,7 @@ var settings = {
 };
 
 var bigSettings = {
+  initialSlide: 2,
   slidesToShow: 2,
   slidesToScroll: 2,
   centerPadding: "30px"
