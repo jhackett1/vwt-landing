@@ -787,15 +787,16 @@ ul.selling-points
     overflow: hidden
     nav.tab-navigation ul
       list-style-type: none
-      display: grid
-      grid-template-columns: 1fr 1fr 1fr
+      display: flex
+      flex-wrap: wrap
       max-width: 600px
       margin: 0 auto
       li
         @include labelText
         color: $brand
         text-align: center
-        padding: 12px
+        padding: 15px
+        flex: 1
         cursor: pointer
         &.selected
           background-color: $lightest

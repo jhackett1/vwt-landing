@@ -24,18 +24,19 @@ import logoSmall from '../../static/logo-small.svg'
 import animatedRing from '../../static/animated-ring.svg'
 import tickIcon from '../../static/tick-icon.svg'
 import aceIcon from '../../static/ace-icon.svg'
-import glassesIcon from '../../static/gov-icon.svg'
+import glassesIcon from '../../static/glasses-icon.svg'
 import govIcon from '../../static/gov-icon.svg'
-import software1 from '../../static/software-1.svg'
-import software2 from '../../static/software-2.svg'
-import software3 from '../../static/software-3.svg'
-
+import software1 from '../../static/software-1.jpg'
+import software2 from '../../static/software-2.jpg'
+import software3 from '../../static/software-3.jpg'
 import pressLogo1 from '../../static/logo1.jpg'
 import pressLogo2 from '../../static/logo2.jpg'
 import pressLogo3 from '../../static/logo3.jpg'
 import pressLogo4 from '../../static/logo4.jpg'
 import pressLogo5 from '../../static/logo5.jpg'
 import pressLogo6 from '../../static/logo6.jpg'
+import cards from '../../static/cards.png'
+import tokens from '../../static/tokens.png'
 
 // The page layout
 const IndexPage = ({data}) => (
@@ -46,7 +47,7 @@ const IndexPage = ({data}) => (
       ctaText="Buy tokens"
       logo={logoDark}
       menuText={[
-        'Sale details', 'Benefits', 'FAQ',
+        'Benefits', 'Team', 'FAQ',
       ]}
       menuLinks={[
         '#one', '#two', '#three'
@@ -76,10 +77,10 @@ const IndexPage = ({data}) => (
     <Explanation
       reversed
       chapterTitle="The opportunity"
-      image="/tokens.svg"
+      image={tokens}
       imageAlt="Tokens"
-      headline="Tapping into the $51.4BN online gaming industry with Blockchain Technology."
-      body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem. Aut voluptatem corporis placeat veritatis autem consequuntur architecto. Expedita natus ratione praesentium."
+      headline="By offering Blockchain technology exclusively for the online gaming industry, the odds are firmly in our favour."
+      body="We’re ahead of the game because we’re using Blockchain to disrupt the global online gaming industry, currently valued in excess of USD 480 billion annually. Our VWT protocol will redefine the way online casinos interact with their clients, by creating a decentralised ecosystem that makes transactions faster, safer and more cost-effective. There are now no limits to what the online gaming world can achieve."
       mainCtaLink="#"
       mainCtaText="Buy tokens"
       secondaryCtaLink="#"
@@ -89,35 +90,34 @@ const IndexPage = ({data}) => (
     <SellingPoints
       id="one"
       chapterTitle="Innovation"
-      headline="Our bespoke protocol is specifically built to serve the needs of the on-chain gambling industry."
+      headline="We’re streamlining the online gaming industry, making it faster, fairer, more democratic and more trustworthy for all."
       icon={tickIcon}
-      point1Heading="High speed transactions"
-      point1Body="Et voluptatem quaerat nam voluptatem."
-      point2Heading="Low fees"
-      point2Body="Iure ducimus odit neque."
-      point3Heading="Provably fair"
-      point3Body="Expedita natus ratione praesentium."
+      point1Heading="Timely"
+      point1Body="Our bespoke protocol can handle up to 50,000 online gaming transactions per second."
+      point2Heading="Transparent"
+      point2Body="Smart contracts minimise the risk of money laundering or third-party data breaches, putting control back in the hands of users and developers."
+      point3Heading="Trusted"
+      point3Body="Our Blockchain technology delivers pseudo-anonymous transactions and total privacy for users, without compromising on the factors they demand: security, reliability and trust. For the committed gamer, we offer complete discretion: the only visible transaction is an investment in a stable cryptocurrency"
       />
 
     <SellingPointsAlt
       chapterTitle="Benefits"
-      headline="Designed to benefit players, developers and governments."
-      point1Icon={aceIcon}
-      point1Heading="Players"
-      point1Body="Et voluptatem quaerat nam voluptatem. Et nam voluptatem."
+      headline="An entire online gaming ecosystem, where everyone wins"
+      point1Icon={govIcon}
+      point1Heading="Investors"
+      point1Body="The opportunity to disrupt and own a slice of the highly competitive and profitable online gaming industry, by investing in a premium brand with a reputation for state-of-the-art innovation, transparency and flair. "
       point2Icon={glassesIcon}
       point2Heading="Developers"
-      point2Body="Iure ducimus odit neque. Et voluptatem quaerat nam voluptatem."
-      point3Icon={govIcon}
-      point3Heading="Governments"
-      point3Body="Expedita natus ratione praesentium. Et voluptatem quaerat nam voluptatem."
+      point2Body="Our out-of-the-box software suite will give you everything you need to build your own online casino. We’ll help create an outstanding user experience that offers transaction speeds far beyond anything available from ethereum-based platforms."
+      point3Icon={aceIcon}
+      point3Heading="Players"
+      point3Body="At last, online gamers get reassurance that the online casinos they choose are trusted and transparent. Plus, their tokens can be moved to different casinos at will, free of charge, and they get the added benefit of owning an exclusive and much sought-after cryptocurrency."
       />
 
     <Tabs
-      id="two"
       icon={logoSmall}
       headline="Token Sale Information"
-      body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem."
+      body="We’re on our way to becoming the innovation and technology partner of choice for the entire online gaming industry. You’re invited to be part of this revolution. "
       tabNames={["Private sale", "Pre sale", "Public sale"]}
       tabDescriptions={[
         "Expedita natus ratione praesentium. Et voluptatem quaerat nam voluptatem.",
@@ -175,27 +175,46 @@ const IndexPage = ({data}) => (
       />
 
     <Team
-      id="three"
+      id="two"
       chapterTitle="Team"
       headline="Meet the team behind VWT"
       teamMembers={{
-        images: ["http://placehold.it/80x80", "http://placehold.it/80x80", "http://placehold.it/80x80", "http://placehold.it/80x80"],
-        names: ["Name Surname", "Name Surname", "Name Surname", "Name Surname"],
-        titles: ["Role title", "Role title", "Role title", "Role title"],
-        bios: [
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt",
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt",
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt",
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt"
+        images: [
+          "http://placehold.it/80x80",
+          "http://placehold.it/80x80",
+          "http://placehold.it/80x80",
+          "http://placehold.it/80x80",
+          "http://placehold.it/80x80"
         ],
-        twitters: ["#", null, null, "#"],
-        linkedins: ["#", null, "#", "#"]
+        names: [
+          "Gavin Berry",
+          "James Vince",
+          "Simon Davenport QC",
+          "Natasha Hooper",
+          "Fatou Camara"
+        ],
+        titles: [
+          "Founder and Chief Executive Officer",
+          "Chief Technology Officer",
+          "Chief Legal Officer",
+          "Brand Ambassador",
+          "Marketing Adviser"
+        ],
+        bios: [
+          "Gavin is responsible for defining VWT’s core proposition and long-term business strategy. After building his own multi-million-pound gaming empire he is determined to bring the values of transparency, credibility and fairness into the industry.",
+          "James oversees VWT’s technical infrastructure and drives the development and implementation of its protocol technology. He brings extensive experience as an ICO development consultant and as CTO of a crypto-based peer-to-peer betting platform.",
+          "Simon provides legal counsel to the executive team and has extensive knowledge in the field of commercial law, and law relating to Blockchain. He was appointed to the Treasury Solicitors' panel of Queen's Counsel in 2011.",
+          "Natasha is responsible for VWT’s image and reputation management, as well as solidifying brand elements and presenting the VWT proposition to potential investors. Her previous experience includes PR and branding for several restaurant chains and start-ups.",
+          "Fatou is responsible for VWT’s marketing activities. Having worked previously with industry heavyweights Party Gaming and the Betway Group, she brings an extensive range of communication skills and business generation analysis to the role."
+        ],
+        twitters: [],
+        linkedins: []
       }}
       />
 
     <Events
-      chapterTitle="Innovation"
-      headline="Meet the team and learn more about our technology"
+      chapterTitle="Events"
+      headline="Discover the VWT ecosystem for yourself"
       upcomingEvents={{
         images: [
           'http://placehold.it/200x200',
@@ -221,8 +240,8 @@ const IndexPage = ({data}) => (
         names: ['Event name', 'Event name', 'Event name', 'Event name', 'Event name'],
         timeplaces: ['London, 2nd July 2018', 'London, 2nd July 2018', 'London, 2nd July 2018', 'London, 2nd July 2018', 'London, 2nd July 2018']
       }}
-      subheadline="Want us to speak at your next event?"
-      body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt."
+      subheadline="Want us to participate in your next event?"
+      body="We’re currently taking global bookings for guest speaker slots, conferences and exhibitions. Get in touch and we’d be happy to discuss how we can add value to your event."
       ctaLink="#"
       ctaText="Email us"
       />
@@ -243,38 +262,50 @@ const IndexPage = ({data}) => (
       />
 
     <Explanation
-      chapterTitle="The opportunity"
-      image="/cards.svg"
+      chapterTitle="New possibilities"
+      image={cards}
       imageAlt="Cards"
-      headline="We can launch your online gaming platform at a fraction of the cost."
-      body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem. Aut voluptatem corporis placeat veritatis autem consequuntur architecto. Expedita natus ratione praesentium."
+      headline="Develop and launch your own online casino, at a fraction of the cost."
+      body="VWT is partnering with clients looking to start their own online casino, by offering them a bespoke Blockchain protocol and industry-specific software-as-a-service. The result is a highly valuable software suite, encompassing all the technologies clients need to launch an online casino, at a fraction of traditional online start-up costs."
       secondaryCtaLink="#"
-      secondaryCtaText="Discover our software"
+      secondaryCtaText="Show the proposition"
       />
 
     <Products
       headline="The Software Suite."
-      body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem."
+      body="Everything needed to create an online gaming platform, including a bespoke protocol, front-end software, back-end software and crypto-wallet."
       products={{
         images: [
           software1, software2, software3
         ],
         names: [
-          'Whitelabel Casino',
+          'VoX Wallet',
           'Hosting platform',
-          'VoX Wallet'
+          'Whitelabel Casino'
         ],
         checklist: [
-          ['Provident est voluptatum modi.', 'Provident est voluptatum modi.', 'Provident est voluptatum modi.'],
-          ['Provident est voluptatum modi.', 'Provident est voluptatum modi.', 'Provident est voluptatum modi.'],
-          ['Provident est voluptatum modi.', 'Provident est voluptatum modi.', 'Provident est voluptatum modi.']
+          [
+            'The link between our Blockchain casino network and ‘off-chain’ casinos',
+            'Players can deposit funds immediately, securely and discretely',
+            'Funds can be transferred quickly (with no fee) to the affiliated casino of their choice'
+          ],
+          [
+            'A slick, professional and highly-intuitive interface able to conduct the high-speed transactions essential for online gambling',
+            'All winnings verified and kept away from third parties',
+            'An outstanding user experience far beyond current ethereum-based options'
+          ],
+          [
+            'Out-of-the-box solution containing all the software needed to start an online casino',
+            'Casino operators will have lower overheads and a lower barrier to entry',
+            'No third-party interactions means reduced risk of fraud or data breaches'
+          ]
         ]
       }}
       />
 
     <SignUp
-      headline="Keep in the loop"
-      body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem."
+      headline="Join our mailing list"
+      body="We’re on our way to becoming the innovation and technology partner of choice for the entire online gaming industry. Subscribe now to receive updates and join our revolution. "
       >
       <form form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post">
           <input type="email" className="form-control" id="email-subscribe" aria-describedby="subscribe" name="email" placeholder="Enter Email Address" required/>
@@ -284,6 +315,7 @@ const IndexPage = ({data}) => (
     </SignUp>
 
     <Faq
+      id="three"
       chapterTitle="FAQ"
       tabNames={["Coin", "Account", "Security", "Team", "Legal"]}
       tabQuestions={[
@@ -324,8 +356,12 @@ const IndexPage = ({data}) => (
       organisationLinkedin="#"
       organisationFacebook="#"
       menu={{
-        text: ["Link one", "FAQ", "Section"],
-        links: ["#", "#", "#"]
+        text: [
+          'Benefits', 'Team', 'FAQ',
+        ],
+        links: [
+          '#one', '#two', '#three'
+        ]
       }}
       />
 

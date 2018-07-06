@@ -12,6 +12,12 @@ module.exports = {
           `Roboto\:100,300,400,700,900`
         ]
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
+      },
+    },
   ],
 }
