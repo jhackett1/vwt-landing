@@ -19,5 +19,19 @@ module.exports = {
         trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
       },
     },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./static/logo-small.svg",
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          favicons: true,
+          firefox: true,
+        }
+      }
+    }
   ],
 }
