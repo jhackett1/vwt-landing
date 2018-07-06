@@ -72,10 +72,13 @@
     max-width: 200px
 
   .block.header
-    padding: 30px
+    padding: 25px
     svg, .button.gradient
       display: none
       visibility: none
+    .button.gradient.small
+      display: inline-block
+      padding: 15px
     .right
       display: flex
       flex-direction: row
@@ -92,12 +95,9 @@
           a
             @include labelText
             text-decoration: none
-            color: $brand
+            color: $lightest
     &.blue
       background: none
-      color: $lightest
-      a img
-        filter: brightness(100)
       nav.site-navigation, .button
         display: none
         visibility: hidden
@@ -395,7 +395,6 @@
     .container
       position: relative
     img
-      filter: grayscale(1) brightness(100)
       display: block
       width: 100px
       margin-bottom: 40px
@@ -418,11 +417,20 @@
       li
         display: inline-block
         text-align: left
-        margin-right: 25px
+        margin-right: 20px
+        &::after
+          content: "·"
+          margin-left: 20px
+          color: $lightest
+        &:last-of-type::after
+          display: none
+          visibility: hidden
         a
-          color: $brand-accent
+          color: $lightest
+          font-size: 0.9em
           text-decoration: none
-          @include labelText
+          font-weight: 300
+
 
 
 @media (min-width: $breakpoint2)

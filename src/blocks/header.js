@@ -70,7 +70,7 @@ export default class Header extends React.Component{
 
           <div onClick={this.handleMenuToggle.bind(this)} className={(this.state.menuOpen)? "frost-cover open" : "frost-cover"}></div>
           {(this.props.ctaLink && this.props.ctaText) ?
-            <a className="button solid small" href={this.props.ctaLink}>{this.props.ctaText}</a>
+            <a className="button gradient small" href={this.props.ctaLink}>{this.props.ctaText}</a>
           : ""}
         </div>
       </header>

@@ -1,5 +1,7 @@
 @import '../pages/variables'
 
+
+
 // Animations
 @keyframes glisten
   0%
@@ -44,6 +46,7 @@
   margin: 0
   box-sizing: border-box
   font-family: $font-stack
+  outline: none !important
 .container
   max-width: $max-width
   margin: 0px auto
@@ -125,7 +128,7 @@ ul.selling-points
 
 // Header
 .block.header
-  background-color: $lightest
+  background-color: $brand
   padding: 10px
   display: flex
   position: fixed
@@ -148,12 +151,14 @@ ul.selling-points
     margin-right: 15px
     cursor: pointer
     height: 30px
+    polygon
+      fill: $lightest
 
 // Hero block
 .block.hero
   background-color: $brand
   text-align: center
-  padding: 70px 40px
+  padding: 70px 30px
   min-height: calc(100vh - #{$header-height})
   .strapline
     @include gradient
@@ -859,14 +864,15 @@ ul.selling-points
 .block.footer
   padding: 40px 40px
   text-align: center
+  background-color: $brand
   img
     margin-bottom: 20px
   h4
     font-size: 0.9em
-    color: $brand
+    color: $lightest
     font-weight: 600
   p
-    color: $brand
+    color: $lightest
     font-size: 0.9em
     margin-bottom: 30px
   .footer-menu

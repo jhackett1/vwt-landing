@@ -20,6 +20,7 @@ import Footer from '../blocks/footer'
 // Import images, icons and logos
 import logo from '../../static/logo.svg'
 import logoDark from '../../static/logo-blue.svg'
+import logoGold from '../../static/logo-gold.svg'
 import logoSmall from '../../static/logo-small.svg'
 import animatedRing from '../../static/animated-ring.svg'
 import tickIcon from '../../static/tick-icon.svg'
@@ -45,7 +46,7 @@ const IndexPage = ({data}) => (
     <Header
       ctaLink="#"
       ctaText="Buy tokens"
-      logo={logoDark}
+      logo={logoGold}
       menuText={[
         'Benefits', 'Team', 'FAQ',
       ]}
@@ -349,7 +350,7 @@ const IndexPage = ({data}) => (
       />
 
     <Footer
-      logo={logoDark}
+      logo={logoGold}
       organisationName="Varius World Tech ICO"
       organisationContact="3rd Floor, 232 Bishopsgate · 0777 777 7777 · info@test.com"
       organisationTwitter="#"
