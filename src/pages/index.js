@@ -364,7 +364,13 @@ const IndexPage = ({data}) => (
           '#one', '#two', '#three'
         ]
       }}
-      />
+      >
+      <form form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post">
+          <input type="email" className="form-control" id="email-subscribe" aria-describedby="subscribe" name="email" placeholder="Enter Email Address" required/>
+          <input type="hidden" name="campaign_token" value="6m35J" />
+          <button type="submit" className="button outline">Subscribe</button>
+      </form>
+    </Footer>
 
   </div>
 )

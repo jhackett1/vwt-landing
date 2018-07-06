@@ -9,8 +9,8 @@ const Footer = ({
   organisationTwitter,
   organisationLinkedin,
   organisationFacebook,
-  menu
-
+  menu,
+  children
  }) => (
   <footer className="block footer" id={(id)? id : ""}>
     <div className="container">
@@ -24,16 +24,6 @@ const Footer = ({
       <p>{organisationContact}</p>
     :""}
 
-    {(menu)?
-      <ul className="footer-menu">
-        {menu.text.map((itemText, i)=>(
-          <li key={i}>
-            <a href={menu.links[i]}>{itemText}</a>
-          </li>
-        ))}
-      </ul>
-    :""}
-
     <div className="organisation-social-links">
       {(organisationTwitter) ?
         <a target="blank" href={organisationTwitter}><Fa.FaTwitter/></a> : ""}
@@ -45,6 +35,18 @@ const Footer = ({
       : ""}
     </div>
 
+    </div>
+    <div className="container footer-lower">
+      {(menu)?
+        <ul className="footer-menu">
+          {menu.text.map((itemText, i)=>(
+            <li key={i}>
+              <a href={menu.links[i]}>{itemText}</a>
+            </li>
+          ))}
+        </ul>
+      :""}
+      {children}
     </div>
   </footer>
 )
