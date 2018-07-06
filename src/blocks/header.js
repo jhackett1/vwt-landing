@@ -5,6 +5,7 @@ import Link from 'gatsby-link'
 import Scrollchor from 'react-scrollchor';
 
 import MenuToggle from '../components/menu-toggle'
+import MobileMenu from '../components/mobile-menu'
 
 export default class Header extends React.Component{
   constructor(props){
@@ -13,6 +14,7 @@ export default class Header extends React.Component{
       atTop: true,
       menuOpen: false
     }
+    this.handleMenuToggle = this.handleMenuToggle.bind(this)
   }
 
   componentDidMount(){
@@ -34,6 +36,7 @@ export default class Header extends React.Component{
 
   render(){
     return(
+      <div>
       <header className={(this.state.atTop)? "block header blue" : "block header"} >
         <div className="inner">
           <MenuToggle onClick={this.handleMenuToggle.bind(this)}/>
@@ -67,13 +70,27 @@ export default class Header extends React.Component{
               </div>
             </nav>
           : ""}
-
-          <div onClick={this.handleMenuToggle.bind(this)} className={(this.state.menuOpen)? "frost-cover open" : "frost-cover"}></div>
           {(this.props.ctaLink && this.props.ctaText) ?
             <a className="button gradient small" href={this.props.ctaLink}>{this.props.ctaText}</a>
           : ""}
         </div>
       </header>
+
+      <div onClick={this.handleMenuToggle.bind(this)} className={(this.state.menuOpen)? "frost-cover open" : "frost-cover"}></div>
+      <MobileMenu
+        open={this.state.menuOpen}
+        menuText={this.props.menuText}
+        menuLinks={this.props.menuLinks}
+        organisationFacebook={this.props.organisationFacebook}
+        organisationLinkedin={this.props.organisationLinkedin}
+        organisationTwitter={this.props.organisationTwitter}
+        ctaLink={this.props.ctaLink}
+        ctaText={this.props.ctaText}
+        handleMenuToggle={this.handleMenuToggle}
+        />
+
+
+      </div>
     )
   }
 }

@@ -8,41 +8,38 @@
 
 // Only style the responsive menu panel on smaller screens
 @media (max-width: $breakpoint1)
-  .block.header
-    .frost-cover
-      position: fixed
-      top: $header-height
-      left: 0
-      right: 0
-      bottom: 0
-      background: $brand-accent
+  .frost-cover
+    position: fixed
+    top: $header-height
+    left: 0
+    right: 0
+    bottom: 0
+    background: $brand-accent
+    opacity: 0.75
+    z-index: 95
+    height: 100vh
+    visibility: hidden
+    opacity: 0
+    transition: 0.2s ease-in
+    &.open
+      visibility: visible
       opacity: 0.75
-      z-index: 99
-      height: 100vh
-      // display: none
-      visibility: hidden
-      opacity: 0
-      transition: 0.2s ease-in
-      &.open
-        // display: block
-        visibility: visible
-        opacity: 0.75
-    nav.site-navigation
-      background-color: $brand
-      position: fixed
-      top: $header-height
-      left: 0px
-      padding: 35px
-      z-index: 999
-      height: calc(100vh - 52px)
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-      transform: translateX(-100%)
-      transition: 0.1s ease-in
-      &.open
-        transform: translateX(0%)
+  .mobile-menu
+    position: fixed
+    background: $brand
+    height: 100%
+    left: 0px
+    padding: 35px
+    z-index: 99
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    transition: 0.1s ease-in
+    transform: translateX(-100%)
+    &.open
+      transform: translateX(0%)
       ul
+        margin-top: $header-height
         list-style: none
         li
           text-transform: uppercase
@@ -69,9 +66,20 @@
           background-color: $brand
           color: $lightest
 
+  .block.header
+    z-index: 999
+    nav.site-navigation
+      display: none
+      visibility: hidden
+
+
 @media (min-width: $breakpoint1)
   .button
     max-width: 200px
+
+  nav.mobile-menu
+    display: none
+    visibility: hidden
 
   .block.header
     padding: 25px
