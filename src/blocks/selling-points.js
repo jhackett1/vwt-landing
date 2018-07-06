@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import ScrollAnimation from 'react-animate-on-scroll'
 
 const SellingPoints = ({
@@ -23,7 +22,7 @@ const SellingPoints = ({
         <ul className="selling-points">
         {(point1Heading && point1Body) ?
           <li>
-            <ScrollAnimation animateIn="pulse" duration={0.5} initiallyVisible={true}>
+            <ScrollAnimation animateIn="fadeIn" offset={100}>
               <img src={icon}/>
             </ScrollAnimation>
             <h3>{point1Heading}</h3>
@@ -32,7 +31,7 @@ const SellingPoints = ({
         : ""}
         {(point2Heading && point2Body) ?
           <li>
-            <ScrollAnimation animateIn="pulse" duration={0.5} initiallyVisible={true}>
+            <ScrollAnimation animateIn="fadeIn" offset={100}>
                <img src={icon}/>
             </ScrollAnimation>
             <h3>{point2Heading}</h3>
@@ -41,7 +40,7 @@ const SellingPoints = ({
         : ""}
         {(point3Heading && point3Body) ?
           <li>
-            <ScrollAnimation animateIn="pulse" duration={0.5} initiallyVisible={true}>
+            <ScrollAnimation animateIn="fadeIn" offset={100}>
               <img src={icon}/>
             </ScrollAnimation>
             <h3>{point3Heading}</h3>

@@ -317,7 +317,7 @@ const IndexPage = ({data}) => (
       body="We’re on our way to becoming the innovation and technology partner of choice for the entire online gaming industry. Subscribe now to receive updates and join our revolution. "
       >
       <form form action="https://app.getresponse.com/add_subscriber.html" acceptCharset="utf-8" method="post">
-          <input type="email" className="form-control" id="email-subscribe" aria-describedby="subscribe" name="email" placeholder="Enter Email Address" required/>
+          <input type="email" className="form-control" id="email-subscribe" aria-describedby="subscribe" name="email" placeholder="Your email" required/>
           <input type="hidden" name="campaign_token" value="6m35J" />
           <button type="submit" className="button outline">Subscribe</button>
       </form>
@@ -374,7 +374,7 @@ const IndexPage = ({data}) => (
       }}
       >
       <form form action="https://app.getresponse.com/add_subscriber.html" acceptCharset="utf-8" method="post">
-          <input type="email" className="form-control" id="email-subscribe" aria-describedby="subscribe" name="email" placeholder="Enter Email Address" required/>
+          <input type="email" className="form-control" id="email-subscribe" aria-describedby="subscribe" name="email" placeholder="Your email" required/>
           <input type="hidden" name="campaign_token" value="6m35J" />
           <button type="submit" className="button outline">Subscribe</button>
       </form>

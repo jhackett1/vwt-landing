@@ -25,7 +25,7 @@ const SellingPointsAlt = ({
         <ul className="selling-points">
         {(point1Heading && point1Body) ?
           <li>
-            <ScrollAnimation animateIn="pulse" duration={0.5} initiallyVisible={true}>
+            <ScrollAnimation animateIn="fadeIn" offset={100}>
               <img src={point1Icon}/>
             </ScrollAnimation>
             <h3>{point1Heading}</h3>
@@ -34,7 +34,7 @@ const SellingPointsAlt = ({
         : ""}
         {(point2Heading && point2Body) ?
           <li>
-            <ScrollAnimation animateIn="pulse" duration={0.5} initiallyVisible={true}>
+            <ScrollAnimation animateIn="fadeIn" offset={100}>
               <img src={point2Icon}/>
             </ScrollAnimation>
             <h3>{point2Heading}</h3>
@@ -43,7 +43,7 @@ const SellingPointsAlt = ({
         : ""}
         {(point3Heading && point3Body) ?
           <li>
-            <ScrollAnimation animateIn="pulse" duration={0.5} initiallyVisible={true}>
+            <ScrollAnimation animateIn="fadeIn" offset={100}>
               <img src={point3Icon}/>
             </ScrollAnimation>
             <h3>{point3Heading}</h3>

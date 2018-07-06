@@ -9,13 +9,11 @@
   100%
     background-position: 0% 50%
 
-@keyframes fadeInUp
+@keyframes fadeIn
   0%
     opacity: 0
-    transform: translateY(10%)
   100%
     opacity: 1
-    transform: translateY(0%)
 
 // Mixins
 @mixin gradient
@@ -137,6 +135,7 @@ form input
   border: 0
   margin-bottom: 15px
   transform: translateY(1.5px)
+  min-width: 50px
 
 .slick-dots
   li
@@ -161,7 +160,8 @@ form input
   padding: 10px
   display: flex
   position: fixed
-  width: 100%
+  -webkit-transform: translateZ(0)
+  width: 100vw
   flex-direction: row
   justify-content: space-between
   align-items: center
@@ -343,7 +343,7 @@ form input
       &.selected
         display: block
         visibility: visible
-        animation: fadeInUp 0.4s ease-in
+        animation: fadeIn 0.4s ease-in
       ul.tab-content
         list-style-type: none
         display: grid
@@ -603,6 +603,7 @@ form input
       display: flex
       flex-direction: row
       margin-bottom: 20px
+      animation: fadeIn 0.4s ease-in
       .image
         width: 80px
         height: 80px
