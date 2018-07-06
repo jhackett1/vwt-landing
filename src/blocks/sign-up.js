@@ -11,7 +11,7 @@ const SignUp = ({
   <section className="block sign-up" id={(id)? id : ""}>
     <div className="container">
       {(headline)? <h2 className="headline">{headline}</h2>: "" }
-      {(body)? <p><ReactMarkdown escapeHtml={false} source={body} /></p>: "" }
+      {(body)? <ReactMarkdown escapeHtml={false} source={body} />: "" }
       {children }
     </div>
   </section>

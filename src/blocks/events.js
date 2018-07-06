@@ -91,7 +91,7 @@ const Events = ({
         <LaterEvents laterEvents={laterEvents} className="later-events"/>
       : ""}
       {(subheadline)? <h3 className="headline">{subheadline}</h3>: "" }
-      {(body)? <p><ReactMarkdown escapeHtml={false} source={body} /></p>: "" }
+      {(body)? <ReactMarkdown escapeHtml={false} source={body} />: "" }
       {(ctaLink && ctaText) ?
         <a className="button solid" href={ctaLink}>{ctaText}</a>
       : "" }

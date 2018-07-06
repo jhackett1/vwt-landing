@@ -222,7 +222,7 @@ const IndexPage = ({data}) => (
       />
 
     <Events
-      chapterTitle={["Events"]}
+      chapterTitle="Events"
       headline="Discover the VWT ecosystem for yourself"
       upcomingEvents={{
         images: [

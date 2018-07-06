@@ -24,7 +24,7 @@ const Graphics = ({
   <section className="block graphics" id={(id)? id : ""}>
     <div className="container">
       {(headline)? <h2 className="headline">{headline}</h2>: "" }
-      {(body)? <p><ReactMarkdown escapeHtml={false} source={body} /></p>: "" }
+      {(body)? <ReactMarkdown escapeHtml={false} source={body} />: "" }
       <div className="grid">
         {(chart1Data && chart1Type) ?
           <div className="chart-holder">

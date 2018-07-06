@@ -23,7 +23,7 @@ const Explanation = ({
       <div className="grid">
         {(image && imageAlt)? <img src={image} alt={imageAlt}/>: "" }
         {(headline)? <h2 className="headline">{headline}</h2>: "" }
-        {(body)? <p><ReactMarkdown escapeHtml={false} source={body} /></p>: "" }
+        {(body)? <ReactMarkdown escapeHtml={false} source={body} />: "" }
         <section className="buttons">
           {(mainCtaLink && mainCtaText) ?
             <a className="button solid" href={mainCtaLink}>{mainCtaText}</a>

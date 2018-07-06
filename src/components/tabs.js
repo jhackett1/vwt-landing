@@ -23,7 +23,7 @@ export default class Tabs extends React.Component{
         <div className="container">
           {(this.props.icon)? <div className="icon"><img src={this.props.icon}/></div> : ""}
           {(this.props.headline)? <h2 className="headline">{this.props.headline}</h2>: "" }
-          {(this.props.body)? <p><ReactMarkdown escapeHtml={false} source={this.props.body} /></p>: "" }
+          {(this.props.body)? <ReactMarkdown escapeHtml={false} source={this.props.body} />: "" }
         </div>
 
         <nav className="tab-navigation">

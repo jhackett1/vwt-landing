@@ -29,7 +29,7 @@ const Faq = ({
         : ""}
         <section className="get-more-help">
           {(subheadline)? <h3>{subheadline}</h3> : "" }
-          {(body)? <p><ReactMarkdown escapeHtml={false} source={body} /></p> : "" }
+          {(body)? <ReactMarkdown escapeHtml={false} source={body} /> : "" }
           {(mainCtaLink && mainCtaText) ?
             <a className="button solid" href={mainCtaLink}>{mainCtaText}</a>
           : "" }
