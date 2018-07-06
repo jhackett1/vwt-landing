@@ -7,18 +7,18 @@
     "animate.css": "^3.6.1",
     "chartist": "^0.11.0",
     "gatsby": "^1.9.273",
-    "gatsby-link": "^1.6.40",
+    "gatsby-link": "^1.6.45",
     "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-google-analytics": "^1.0.31",
     "gatsby-plugin-google-fonts": "0.0.4",
-    "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-sass": "^1.0.26",
-    "markdown-it": "^8.4.1",
     "prop-types": "^15.6.2",
     "react-animate-on-scroll": "^2.1.5",
     "react-chartist": "^0.13.1",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
+    "react-markdown": "^3.3.4",
     "react-responsive": "^4.1.0",
     "react-scrollchor": "^5.1.0",
     "react-slick": "^0.23.1",
@@ -35,7 +35,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.12.0"
+    "prettier": "^1.13.7"
   },
   "repository": {
     "type": "git",

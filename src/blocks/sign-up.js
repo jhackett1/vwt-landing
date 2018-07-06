@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-import MarkdownIt from 'markdown-it'
-let md = new MarkdownIt({ html: true });
+import ReactMarkdown from 'react-markdown'
 
 const SignUp = ({
   id,
@@ -13,7 +11,7 @@ const SignUp = ({
   <section className="block sign-up" id={(id)? id : ""}>
     <div className="container">
       {(headline)? <h2 className="headline">{headline}</h2>: "" }
-      {(body)? <p dangerouslySetInnerHTML={{ __html: md.render(body) }}></p>: "" }
+      {(body)? <p><ReactMarkdown escapeHtml={false} source={body} /></p>: "" }
       {children }
     </div>
   </section>

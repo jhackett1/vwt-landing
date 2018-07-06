@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import ScrollAnimation from 'react-animate-on-scroll';
-import MarkdownIt from 'markdown-it'
-let md = new MarkdownIt({ html: true });
+import ReactMarkdown from 'react-markdown'
 
 import Caret from '../components/caret.js'
 
@@ -29,7 +27,7 @@ export default class Tabs extends React.Component{
         <div className="container">
           {(this.props.icon)? <div className="icon"><img src={this.props.icon}/></div> : ""}
           {(this.props.headline)? <h2 className="headline">{this.props.headline}</h2>: "" }
-          {(this.props.body)? <p dangerouslySetInnerHTML={{ __html: md.render(this.props.body) }}></p>: "" }
+          {(this.props.body)? <p><ReactMarkdown escapeHtml={false} source={this.props.body} /></p>: "" }
         </div>
 
         <nav className="tab-navigation">

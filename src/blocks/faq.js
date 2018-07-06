@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import MarkdownIt from 'markdown-it'
-let md = new MarkdownIt({ html: true });
+import ReactMarkdown from 'react-markdown'
 
 import Tabs from '../components/tabs'
 import Caret from '../components/caret'
+
+
 
 const Faq = ({
   id,
@@ -28,7 +29,7 @@ const Faq = ({
         : ""}
         <section className="get-more-help">
           {(subheadline)? <h3>{subheadline}</h3> : "" }
-          {(body)? <p dangerouslySetInnerHTML={{ __html: md.render(body) }}></p> : "" }
+          {(body)? <p><ReactMarkdown escapeHtml={false} source={body} /></p> : "" }
           {(mainCtaLink && mainCtaText) ?
             <a className="button solid" href={mainCtaLink}>{mainCtaText}</a>
           : "" }

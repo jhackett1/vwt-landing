@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import MarkdownIt from 'markdown-it'
-let md = new MarkdownIt({ html: true });
+import ReactMarkdown from 'react-markdown'
 
 import Caret from '../components/caret.js'
 
@@ -24,7 +23,7 @@ const Explanation = ({
       <div className="grid">
         {(image && imageAlt)? <img src={image} alt={imageAlt}/>: "" }
         {(headline)? <h2 className="headline">{headline}</h2>: "" }
-        {(body)? <p dangerouslySetInnerHTML={{ __html: md.render(body) }}></p>: "" }
+        {(body)? <p><ReactMarkdown escapeHtml={false} source={body} /></p>: "" }
         <section className="buttons">
           {(mainCtaLink && mainCtaText) ?
             <a className="button solid" href={mainCtaLink}>{mainCtaText}</a>

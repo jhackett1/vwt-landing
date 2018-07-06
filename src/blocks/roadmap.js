@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import * as Fa from 'react-icons/lib/fa'
 import ScrollAnimation from 'react-animate-on-scroll'
 

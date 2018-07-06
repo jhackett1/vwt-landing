@@ -6,7 +6,6 @@ import Scrollchor from 'react-scrollchor';
 
 import MenuToggle from '../components/menu-toggle'
 
-
 export default class Header extends React.Component{
   constructor(props){
     super(props)

@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ChartistGraph from 'react-chartist'
 import ScrollAnimation from 'react-animate-on-scroll'
-import MarkdownIt from 'markdown-it'
-let md = new MarkdownIt({ html: true });
+import ReactMarkdown from 'react-markdown'
+
+
 
 import './chartist.css'
 
@@ -23,7 +24,7 @@ const Graphics = ({
   <section className="block graphics" id={(id)? id : ""}>
     <div className="container">
       {(headline)? <h2 className="headline">{headline}</h2>: "" }
-      {(body)? <p dangerouslySetInnerHTML={{ __html: md.render(body) }}></p>: "" }
+      {(body)? <p><ReactMarkdown escapeHtml={false} source={body} /></p>: "" }
       <div className="grid">
         {(chart1Data && chart1Type) ?
           <div className="chart-holder">
