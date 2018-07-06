@@ -4,18 +4,43 @@
   to
     transform: translate(-50%, 55%) rotate(360deg)
 
+@keyframes spinBig
+  from
+    transform: translate(60%, -55%) rotate(0deg)
+  to
+    transform: translate(60%, -55%) rotate(360deg)
+
 .block.hero
   overflow: hidden
   position: relative
   .container
     position: relative
     z-index: 2
-  .animated-ring
-    position: absolute
-    bottom: 0px
-    left: 50%
-    width: 140%
-    z-index: 1
-    transform-origin: center
-    transform: translate(-50%, 55%)
-    // animation: spin 60s infinite linear
+
+@media screen and (max-width: 800px)
+  .block.hero
+    .animated-ring
+      position: absolute
+      bottom: 0px
+      left: 50%
+      width: 140%
+      z-index: 1
+      transform-origin: center
+      transform: translate(-50%, 55%)
+      animation: spin 60s infinite linear
+
+@media screen and (min-width: 800px)
+  .block.hero
+    .animated-ring
+      position: absolute
+      left: inherit
+      height: 180%
+      top: 50%
+      right: 0px
+      transform: translate(60%, -55%)
+      animation: spinBig 60s infinite linear
+
+.block.sign-up
+  background-image: url('/empty-ring.svg')
+  background-size: cover
+  background-position: center

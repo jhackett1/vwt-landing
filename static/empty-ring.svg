@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 669 667" style="enable-background:new 0 0 669 667;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.35;}
+	.st1{filter:url(#b);}
+</style>
+<filter  height="127.2%" id="b" width="127.2%" x="-13.6%" y="-13.6%">
+	<feMorphology  in="SourceAlpha" operator="dilate" radius="0.5" result="shadowSpreadOuter1"></feMorphology>
+	<feOffset  dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+	<feGaussianBlur  in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="25.5"></feGaussianBlur>
+	<feComposite  in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+	<feColorMatrix  in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0.17254902   0 0 0 0 0.431372549  0 0 0 0.8 0">
+		</feColorMatrix>
+</filter>
+<g class="st0">
+	<g transform="translate(51 50)">
+		<g class="st1">
+			<circle cx="283.5" cy="283.5" r="283.5"/>
+		</g>
+	</g>
+</g>
+</svg>

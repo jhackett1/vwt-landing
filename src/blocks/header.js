@@ -1,6 +1,7 @@
 import React from 'react'
 import * as Fa from 'react-icons/lib/fa'
 import Link from 'gatsby-link'
+import Scrollchor from 'react-scrollchor';
 
 import MenuToggle from '../components/menu-toggle'
 
@@ -9,8 +10,19 @@ export default class Header extends React.Component{
   constructor(props){
     super(props)
     this.state = {
+      atTop: true,
       menuOpen: false
     }
+  }
+
+  componentDidMount(){
+    window.addEventListener('scroll', (event) => {
+        if(window.pageYOffset === 0){
+          this.setState({atTop: true})
+        } else {
+          this.setState({atTop: false})
+        }
+     });
   }
 
   handleMenuToggle(){
@@ -22,19 +34,19 @@ export default class Header extends React.Component{
 
   render(){
     return(
-      <header className="block header">
+      <header className={(this.state.atTop)? "block header blue" : "block header"} >
         <div className="inner">
           <MenuToggle onClick={this.handleMenuToggle.bind(this)}/>
-          <Link to="/"><img className="site-logo" src={this.props.logo} alt="Site logo"/></Link>
+          <Scrollchor to="#"><img className="site-logo" src={this.props.logo} alt="Site logo"/></Scrollchor>
         </div>
-        <div>
+        <div className="right">
 
           {(this.props.menuText && this.props.menuLinks) ?
             <nav className={(this.state.menuOpen)? "site-navigation open" : "site-navigation"}>
               <ul>
                 {this.props.menuText.map((item, i)=>(
-                  <li key={i}>
-                    <a href={this.props.menuLinks}>{item}</a>
+                  <li key={i} onClick={this.handleMenuToggle.bind(this)}>
+                    <Scrollchor to={this.props.menuLinks[i]}>{item}</Scrollchor>
                   </li>
                 ))}
               </ul>

@@ -1,7 +1,8 @@
 import React from 'react'
-import ScrollAnimation from 'react-animate-on-scroll';
+import ScrollAnimation from 'react-animate-on-scroll'
 
 const SellingPoints = ({
+  id,
   chapterTitle,
   headline,
   body,
@@ -13,7 +14,7 @@ const SellingPoints = ({
   point3Body,
   icon
  }) => (
-  <section className="block selling-points">
+  <section className="block selling-points" id={(id)? id : ""}>
     <div className="container">
       {(chapterTitle)? <span className="chapter-title">{chapterTitle}</span>: "" }
       <div className="grid">

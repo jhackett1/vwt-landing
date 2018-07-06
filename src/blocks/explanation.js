@@ -4,6 +4,7 @@ import React from 'react'
 import Caret from '../components/caret.js'
 
 const Explanation = ({
+  id,
   chapterTitle,
   headline,
   body,
@@ -15,7 +16,7 @@ const Explanation = ({
   image,
   imageAlt
  }) => (
-  <section className="block explanation">
+  <section className={(reversed)? "block explanation reversed" : "block explanation"} id={(id)? id : ""}>
     <div className="container">
       {(chapterTitle)? <span className="chapter-title">{chapterTitle}</span>: "" }
       <div className="grid">

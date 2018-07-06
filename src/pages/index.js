@@ -30,6 +30,13 @@ import software1 from '../../static/software-1.svg'
 import software2 from '../../static/software-2.svg'
 import software3 from '../../static/software-3.svg'
 
+import pressLogo1 from '../../static/logo1.jpg'
+import pressLogo2 from '../../static/logo2.jpg'
+import pressLogo3 from '../../static/logo3.jpg'
+import pressLogo4 from '../../static/logo4.jpg'
+import pressLogo5 from '../../static/logo5.jpg'
+import pressLogo6 from '../../static/logo6.jpg'
+
 // The page layout
 const IndexPage = ({data}) => (
   <div>
@@ -42,7 +49,7 @@ const IndexPage = ({data}) => (
         'Sale details', 'Benefits', 'FAQ',
       ]}
       menuLinks={[
-        '#', '#', '#'
+        '#one', '#two', '#three'
       ]}
       organisationTwitter="#"
       organisationLinkedin="#"
@@ -62,10 +69,12 @@ const IndexPage = ({data}) => (
     </Hero>
 
     <Logos
-      logos={['logo1.jpg', 'logo2.jpg', 'logo3.jpg', 'logo4.jpg', 'logo5.jpg', 'logo6.jpg']}
+      logos={[pressLogo1, pressLogo2, pressLogo3, pressLogo4,
+      pressLogo5, pressLogo6]}
       />
 
     <Explanation
+      reversed
       chapterTitle="The opportunity"
       image="/tokens.svg"
       imageAlt="Tokens"
@@ -78,6 +87,7 @@ const IndexPage = ({data}) => (
       />
 
     <SellingPoints
+      id="one"
       chapterTitle="Innovation"
       headline="Our bespoke protocol is specifically built to serve the needs of the on-chain gambling industry."
       icon={tickIcon}
@@ -104,6 +114,7 @@ const IndexPage = ({data}) => (
       />
 
     <Tabs
+      id="two"
       icon={logoSmall}
       headline="Token Sale Information"
       body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem."
@@ -164,6 +175,7 @@ const IndexPage = ({data}) => (
       />
 
     <Team
+      id="three"
       chapterTitle="Team"
       headline="Meet the team behind VWT"
       teamMembers={{
@@ -238,11 +250,11 @@ const IndexPage = ({data}) => (
       body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem. Aut voluptatem corporis placeat veritatis autem consequuntur architecto. Expedita natus ratione praesentium."
       secondaryCtaLink="#"
       secondaryCtaText="Discover our software"
-      reversed
       />
 
     <Products
       headline="The Software Suite."
+      body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem."
       products={{
         images: [
           software1, software2, software3
@@ -264,7 +276,11 @@ const IndexPage = ({data}) => (
       headline="Keep in the loop"
       body="Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem."
       >
-      Form HTML goes here
+      <form form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post">
+          <input type="email" className="form-control" id="email-subscribe" aria-describedby="subscribe" name="email" placeholder="Enter Email Address" required/>
+          <input type="hidden" name="campaign_token" value="6m35J" />
+          <button type="submit" className="button outline">Subscribe</button>
+      </form>
     </SignUp>
 
     <Faq
@@ -307,6 +323,10 @@ const IndexPage = ({data}) => (
       organisationTwitter="#"
       organisationLinkedin="#"
       organisationFacebook="#"
+      menu={{
+        text: ["Link one", "FAQ", "Section"],
+        links: ["#", "#", "#"]
+      }}
       />
 
   </div>

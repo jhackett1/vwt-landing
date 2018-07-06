@@ -20,7 +20,7 @@ export default class Tabs extends React.Component{
   render(){
 
     return(
-      <section className="block tabs" role="tablist">
+      <section className="block tabs" role="tablist" id={(this.props.id)? this.props.id : ""}>
 
         <div className="container">
           {(this.props.icon)? <div className="icon"><img src={this.props.icon}/></div> : ""}

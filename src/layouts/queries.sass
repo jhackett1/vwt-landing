@@ -1,0 +1,449 @@
+@import '../pages/variables'
+
+// Only style the responsive menu panel on smaller screens
+@media (max-width: $breakpoint1)
+  .block.header
+    .frost-cover
+      position: fixed
+      top: $header-height
+      left: 0
+      right: 0
+      bottom: 0
+      background: $brand-accent
+      opacity: 0.75
+      z-index: 99
+      // display: none
+      visibility: hidden
+      opacity: 0
+      transition: 0.2s ease-in
+      &.open
+        // display: block
+        visibility: visible
+        opacity: 0.75
+    nav.site-navigation
+      position: fixed
+      z-index: 999
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      padding: 35px
+      // height: 100vh
+      max-width: 100%
+      width: 300px
+      background-color: $brand
+      top: $header-height
+      left: 0
+      bottom: 0px
+      visibility: hidden
+      transform: translateX(-100%)
+      transition: 0.2s ease-in
+      &.open
+        visibility: visible
+        transform: translateX(0px)
+      ul
+        list-style: none
+        li
+          text-transform: uppercase
+          font-weight: 700
+          font-size: 1em
+          a
+            display: block
+            padding: 20px 0px
+            color: $lightest
+            text-decoration: none
+      .organisation-social-links
+        display: flex
+        flex-direction: row
+        justify-content: center
+        width: 100%
+        margin-top: 20px
+        a
+          display: inline-block
+          width: 50px
+          padding: 8px
+          text-decoration: none
+          text-align: center
+          margin-right: 10px
+          background-color: $brand
+          color: $lightest
+
+@media (min-width: $breakpoint1)
+  .button
+    max-width: 200px
+
+  .block.header
+    padding: 30px
+    svg, .button.gradient
+      display: none
+      visibility: none
+    .right
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+    nav.site-navigation
+      ul
+        list-style: none
+        margin-right: 15px
+        li
+          display: inline-block
+          padding: 0px 14px
+          transform: translateY(-1px)
+          a
+            @include labelText
+            text-decoration: none
+            color: $brand
+    &.blue
+      background: none
+      color: $lightest
+      a img
+        filter: brightness(100)
+      nav.site-navigation, .button
+        display: none
+        visibility: hidden
+
+  .block.hero
+    margin-top: 0px
+    min-height: inherit
+    text-align: left
+    padding: 150px 0px
+    h1
+      font-size: 3.5em
+      max-width: 50%
+      line-height: 1.2em
+    .button
+      margin: 0px 20px 20px 0px
+      display: inline-block
+
+  .block.logos
+    .container
+      grid-template-columns: 1fr 1fr 1fr
+
+  .block.explanation
+    padding: 90px 0px
+    .chapter-title
+      margin-bottom: 60px
+    .container
+      .grid
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: fit-content() fit-content() fit-content() 1fr
+        img
+          grid-row: 1 / 5
+          padding: 0px 90px
+        h2.headline, p, .buttons
+          text-align: left
+          grid-column: 2 / 3
+        .button
+          margin-left: 0px
+        h2.headline
+          font-size: 2em
+    &.reversed .container .grid
+      img
+        grid-column: 2 / 3
+      h2.headline, p, .buttons
+        grid-column: 1 / 2
+
+  .block.selling-points
+    padding: 90px 0px
+    .chapter-title
+      margin-bottom: 60px
+    .container
+      .grid
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-column-gap: 50px
+        h2.headline
+          font-size: 2em
+          text-align: left
+        .selling-points
+          margin-top: -15px
+          li
+            display: grid
+            grid-template-columns: auto 1fr
+            grid-template-rows: 1fr auto auto 1fr
+            grid-column-gap: 20px
+            text-align: left
+            margin-bottom: 0px
+            div
+              grid-column: 1 / 2
+              grid-row: 1 / 5
+              width: 140px
+              height: 140px
+            h3
+              grid-column: 2 / 3
+              grid-row: 2 / 3
+            p
+              grid-column: 2 / 3
+              grid-row: 3 / 4
+
+  .block.selling-points-alt
+    padding: 90px 0px
+    .chapter-title
+      margin-bottom: 60px
+    .container
+      h2.headline
+        font-size: 2em
+        text-align: left
+        max-width: 66.66%
+        margin-bottom: 60px
+      .selling-points
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-column-gap: 60px
+
+  .block.tabs
+    padding-top: 90px
+    .icon
+      width: 65px
+      height: 65px
+    h2.headline
+      font-size: 2em
+    p
+      max-width: 500px
+      margin: 0 auto 60px auto
+    nav.tab-navigation ul
+      max-width: 700px
+      li
+        padding: 25px
+    section.tabs
+      div.tab.selected
+        display: grid
+        grid-template-columns: 1fr 2fr
+        grid-template-rows: auto auto auto 1fr
+        grid-column-gap: 50px
+        text-align: left
+        ul.tab-content
+          grid-column: 2 / 3
+          grid-row: 1 / 5
+          border-bottom: none
+        h3, p, .buttons
+          grid-column: 1 / 2
+          text-align: left
+          .button
+            margin-left: 0px
+
+  .block.graphics
+    padding: 90px 0px
+    .container
+      h2.headline
+        font-size: 2em
+      p
+        max-width: 500px
+        margin: 0 auto 60px auto
+      .grid
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-column-gap: 100px
+
+  .block.team
+    padding: 90px 0px
+    .chapter-title
+      margin-bottom: 60px
+    .grid
+      overflow: hidden
+      max-width: $max-width
+      width: 100%
+      position: relative
+      margin: 0px auto
+      padding: $container-padding
+      display: grid
+      grid-template-columns: auto 66.66%
+      grid-column-gap: 50px
+      width: 100%
+    h2.headline
+      font-size: 2em
+      text-align: left
+      margin-bottom: 60px
+      grid-column: 1 / 2
+    .slick-slider
+      grid-column: 2 / 3
+      &::before
+        content: ""
+        display: block
+        background: $light
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        width: 30px
+        z-index: 9
+      &::after
+        content: ""
+        display: block
+        background: linear-gradient(90deg, transparentize($light, 1), $light)
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        width: 20px
+    .team-members .team-member
+      img, p
+        margin-bottom: 25px
+
+  .block.events
+    padding: 90px 0px
+    .chapter-title
+      margin-bottom: 60px
+    h2.headline
+      font-size: 2em
+      margin-bottom: 60px
+      max-width: 50%
+      text-align: left
+    .slick-slider
+      max-width: $max-width
+      width: 100%
+      position: relative
+      margin: 0px auto 60px auto
+      padding: $container-padding
+      .slick-list
+        overflow: visible
+      .upcoming-event
+        text-align: left
+        &:focus
+          outline: none
+        p
+          text-align: left
+    .grid
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: auto auto auto 1fr
+      grid-column-gap: 100px
+      .later-events
+        grid-column: 2 / 3
+        grid-row: 1 / 5
+      h3.headline
+        font-size: 2em
+        grid-column: 1 / 2
+        text-align: left
+      p
+        grid-column: 1 / 2
+        text-align: left
+        margin-left: 0px
+      a.button
+        grid-column: 1 / 2
+        margin-left: 0
+
+  .block.roadmap
+    padding: 90px 0px
+    .chapter-title
+      margin-bottom: 60px
+
+  .block.products
+    padding: 90px 0px
+    h2.headline
+      font-size: 2em
+      max-width: 50%
+      margin: 0 auto 30px auto
+    p
+      max-width: 500px
+      margin: 0 auto 50px auto
+    ul.products-list
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-column-gap: 30px
+
+  .block.sign-up
+    padding: 90px 0px
+    h2.headline
+      font-size: 2em
+      max-width: 50%
+      margin: 0 auto 30px auto
+    p
+      max-width: 500px
+      margin: 0 auto 50px auto
+    form input
+      width: 300px
+    .button
+      margin-left: 20px
+      display: inline-block
+
+  .block.faq
+    padding: 90px 0px
+    .chapter-title
+      margin-bottom: 60px
+    .grid
+      display: grid
+      grid-template-columns: 2fr 1fr
+      grid-column-gap: 50px
+      section.tabs
+        left: inherit
+        right: inherit
+        margin-left: 0
+        margin-right: 0
+        width: 100%
+        max-width: 100%
+        margin-bottom: 0px
+        nav.tab-navigation
+          ul
+            display: flex
+            margin: 0
+            max-width: 100%
+            width: 100%
+            li
+              flex: 1
+              padding: 19px
+      .get-more-help
+        text-align: left
+        .button
+          margin-left: 0px
+
+  .block.footer
+    padding: 90px 0px
+    background-color: $brand
+    .container
+      position: relative
+    img
+      filter: grayscale(1) brightness(100)
+      display: block
+      width: 100px
+      margin-bottom: 40px
+      margin-left: 0px
+    h4, p
+      color: $lightest
+      margin-left: 0px
+      text-align: left
+    .organisation-social-links
+      position: absolute
+      top: 0
+      right: 0
+    .footer-menu
+      list-style: none
+      display: block
+      visibility: visible
+      margin-left: 0px
+      text-align: left
+      margin-top: 60px
+      li
+        display: inline-block
+        text-align: left
+        margin-right: 25px
+        a
+          color: $brand-accent
+          text-decoration: none
+          @include labelText
+
+
+@media (min-width: $breakpoint2)
+  .block.header
+    padding: 35px
+
+  .block.hero
+    padding: 200px 0px
+    h1
+      font-size: 4.5em
+    .strapline
+      font-size: 1.1em
+
+  .block.logos
+    .container
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+
+  .block
+    .container
+      max-width: 1300px !important
+      h2.headline
+        font-size: 2.3em !important
+
+  .block.team .grid, .block.events .slick-slider
+    max-width: 1300px

@@ -2,15 +2,17 @@ import React from 'react'
 import * as Fa from 'react-icons/lib/fa'
 
 const Footer = ({
+  id,
   logo,
   organisationName,
   organisationContact,
   organisationTwitter,
   organisationLinkedin,
-  organisationFacebook
+  organisationFacebook,
+  menu
 
  }) => (
-  <footer className="block footer">
+  <footer className="block footer" id={(id)? id : ""}>
     <div className="container">
     {(logo)?
       <img className="organisation-logo" src={logo}/>
@@ -20,6 +22,16 @@ const Footer = ({
     :""}
     {(organisationContact)?
       <p>{organisationContact}</p>
+    :""}
+
+    {(menu)?
+      <ul className="footer-menu">
+        {menu.text.map((itemText, i)=>(
+          <li key={i}>
+            <a href={menu.links[i]}>{itemText}</a>
+          </li>
+        ))}
+      </ul>
     :""}
 
     <div className="organisation-social-links">

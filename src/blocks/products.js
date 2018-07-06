@@ -1,12 +1,15 @@
 import React from 'react'
 
 const Products = ({
+  id,
   headline,
+  body,
   products
  }) => (
-  <section className="block products">
+  <section className="block products" id={(id)? id : ""}>
     <div className="container">
       {(headline)? <h2 className="headline">{headline}</h2>: "" }
+      {(body)? <p>{body}</p>: "" }      
       {(products)?
         <ul className="products-list">
           {products.names.map((productName, i)=>(

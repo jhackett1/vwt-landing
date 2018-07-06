@@ -3,6 +3,7 @@ import React from 'react'
 import Caret from '../components/caret.js'
 
 const Hero = ({
+  id,
   headline,
   strapline,
   mainCtaText,
@@ -12,7 +13,7 @@ const Hero = ({
   background,
   children
 }) => (
-  <section className="block hero">
+  <section className="block hero" id={(id)? id : ""}>
     {children}
     <div className="container">
       {(strapline)? <p className="strapline">{strapline}</p> : ""}

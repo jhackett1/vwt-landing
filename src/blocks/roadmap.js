@@ -3,10 +3,11 @@ import * as Fa from 'react-icons/lib/fa'
 import ScrollAnimation from 'react-animate-on-scroll'
 
 const Roadmap = ({
+  id,
   chapterTitle,
   milestones
  }) => (
-  <section className="block roadmap">
+  <section className="block roadmap" id={(id)? id : ""}>
     <div className="container">
       {(chapterTitle)? <span className="chapter-title">{chapterTitle}</span>: "" }
       {(milestones)?

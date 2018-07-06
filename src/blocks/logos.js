@@ -1,8 +1,8 @@
 import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll';
 
-const Logos = ({ logos }) => (
-  <section className="block logos">
+const Logos = ({ logos, id }) => (
+  <section className="block logos" id={(id)? id : ""}>
     <div className="container">
       {(logos) ? logos.map((logo, i)=>(
         <ScrollAnimation animateIn="fadeIn" offset={50}>

@@ -1,6 +1,7 @@
 import React from 'react'
 import * as Fa from 'react-icons/lib/fa'
 import Slider from "react-slick";
+import MediaQuery from 'react-responsive';
 
 import Caret from '../components/caret'
 import LaterEvents from '../components/later-events'
@@ -16,7 +17,17 @@ var settings = {
   centerPadding: "20px"
 };
 
+var bigSettings = {
+  slidesToShow: 3,
+  centerPadding: "0px",
+  swipe: false,
+  draggable: false,
+  touchMove: false,
+  dots: false
+};
+
 const Events = ({
+  id,
   chapterTitle,
   headline,
   upcomingEvents,
@@ -26,31 +37,53 @@ const Events = ({
   ctaLink,
   ctaText
  }) => (
-  <section className="block events">
+  <section className="block events" id={(id)? id : ""}>
     <div className="container">
       {(chapterTitle)? <span className="chapter-title">{chapterTitle}</span>: "" }
       {(headline)? <h2 className="headline">{headline}</h2>: "" }
     </div>
       {(upcomingEvents)?
-        <Slider className="upcoming-events" {...settings}>
-          {upcomingEvents.names.map((eventName, i)=>(
-            <div key={i} className="upcoming-event">
-              <div className="image" style={{backgroundImage: `url(${upcomingEvents.images[i]})`}}></div>
-              <div className="inner-text">
-                <h3>{eventName}</h3>
-                <h5>{upcomingEvents.timeplaces[i]}</h5>
-                <p>{upcomingEvents.descriptions[i]}</p>
-                {(upcomingEvents.links[i])?
-                  <a className="button bare" href={upcomingEvents.links[i]}>Learn more <Caret /></a>
-                : "" }
-              </div>
-            </div>
-          ))}
-        </Slider>
+        <div>
+          <MediaQuery minWidth="800px">
+            <Slider className="upcoming-events" {...settings} {...bigSettings}>
+              {upcomingEvents.names.map((eventName, i)=>(
+                <div key={i} className="upcoming-event">
+                  <div className="image" style={{backgroundImage: `url(${upcomingEvents.images[i]})`}}></div>
+                  <div className="inner-text">
+                    <h3>{eventName}</h3>
+                    <h5>{upcomingEvents.timeplaces[i]}</h5>
+                    <p>{upcomingEvents.descriptions[i]}</p>
+                    {(upcomingEvents.links[i])?
+                      <a className="button bare" href={upcomingEvents.links[i]}>Learn more <Caret /></a>
+                    : "" }
+                  </div>
+                </div>
+              ))}
+            </Slider>
+            </MediaQuery>
+
+            <MediaQuery maxWidth="800px">
+              <Slider className="upcoming-events" {...settings}>
+                {upcomingEvents.names.map((eventName, i)=>(
+                  <div key={i} className="upcoming-event">
+                    <div className="image" style={{backgroundImage: `url(${upcomingEvents.images[i]})`}}></div>
+                    <div className="inner-text">
+                      <h3>{eventName}</h3>
+                      <h5>{upcomingEvents.timeplaces[i]}</h5>
+                      <p>{upcomingEvents.descriptions[i]}</p>
+                      {(upcomingEvents.links[i])?
+                        <a className="button bare" href={upcomingEvents.links[i]}>Learn more <Caret /></a>
+                      : "" }
+                    </div>
+                  </div>
+                ))}
+              </Slider>
+            </MediaQuery>
+          </div>
       : ""}
-    <div className="container">
+    <div className="container grid">
       {(laterEvents)?
-        <LaterEvents laterEvents={laterEvents}/>
+        <LaterEvents laterEvents={laterEvents} className="later-events"/>
       : ""}
       {(subheadline)? <h3 className="headline">{subheadline}</h3>: "" }
       {(body)? <p>{body}</p>: "" }

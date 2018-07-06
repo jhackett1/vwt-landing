@@ -4,6 +4,7 @@ import Tabs from '../components/tabs'
 import Caret from '../components/caret'
 
 const Faq = ({
+  id,
   chapterTitle,
   tabNames,
   tabQuestions,
@@ -15,7 +16,7 @@ const Faq = ({
   secondaryCtaLink,
   secondaryCtaText
 }) => (
-  <section className="block faq">
+  <section className="block faq" id={(id)? id : ""}>
     <div className="container">
       {(chapterTitle)? <span className="chapter-title">{chapterTitle}</span>: "" }
       <div className="grid">
