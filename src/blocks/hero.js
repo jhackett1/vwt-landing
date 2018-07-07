@@ -11,7 +11,6 @@ const Hero = ({
   mainCtaLink,
   secondaryCtaText,
   secondaryCtaLink,
-  background,
   children
 }) => (
   <section className="block hero" id={(id)? id : ""}>
@@ -41,6 +40,5 @@ Hero.propTypes = {
   mainCtaLink: PropTypes.string,
   secondaryCtaText: PropTypes.string,
   secondaryCtaLink: PropTypes.string,
-  background: PropTypes.string,
   children: PropTypes.node
 }

@@ -73,7 +73,6 @@ const IndexPage = ({data}) => (
       mainCtaText="Buy tokens"
       secondaryCtaLink="#"
       secondaryCtaText="Whitepaper"
-
       >
         <img className="animated-ring" src={animatedRing}/>
     </Hero>
@@ -225,6 +224,7 @@ const IndexPage = ({data}) => (
     <Events
       chapterTitle="Events"
       headline="Discover the VWT ecosystem for yourself"
+      body1="We’re hosting events all over the world to demonstrate how our technology will revolutionise the online gambling industry."
       upcomingEvents={{
         images: [
           'http://placehold.it/200x200',
@@ -251,7 +251,7 @@ const IndexPage = ({data}) => (
         timeplaces: ['London, 2nd July 2018', 'London, 2nd July 2018', 'London, 2nd July 2018', 'London, 2nd July 2018', 'London, 2nd July 2018']
       }}
       subheadline="Want us to participate in your next event?"
-      body="We’re currently taking global bookings for guest speaker slots, conferences and exhibitions. Get in touch and we’d be happy to discuss how we can add value to your event."
+      body2="We’re currently taking global bookings for guest speaker slots, conferences and exhibitions. Get in touch and we’d be happy to discuss how we can add value to your event."
       ctaLink="#"
       ctaText="Email us"
       />

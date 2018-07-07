@@ -5,11 +5,8 @@ import Slider from "react-slick";
 import MediaQuery from 'react-responsive';
 import ReactMarkdown from 'react-markdown'
 
-
 import Caret from '../components/caret'
 import LaterEvents from '../components/later-events'
-
-
 
 var settings = {
   dots: true,
@@ -35,10 +32,11 @@ const Events = ({
   id,
   chapterTitle,
   headline,
+  body1,
   upcomingEvents,
   laterEvents,
   subheadline,
-  body,
+  body2,
   ctaLink,
   ctaText
  }) => (
@@ -46,6 +44,7 @@ const Events = ({
     <div className="container">
       {(chapterTitle)? <span className="chapter-title">{chapterTitle}</span>: "" }
       {(headline)? <h2 className="headline">{headline}</h2>: "" }
+      {(body1)? <ReactMarkdown escapeHtml={false} source={body1} />: "" }
     </div>
       {(upcomingEvents)?
         <div>
@@ -91,7 +90,7 @@ const Events = ({
         <LaterEvents laterEvents={laterEvents} className="later-events"/>
       : ""}
       {(subheadline)? <h3 className="headline">{subheadline}</h3>: "" }
-      {(body)? <ReactMarkdown escapeHtml={false} source={body} />: "" }
+      {(body2)? <ReactMarkdown escapeHtml={false} source={body2} />: "" }
       {(ctaLink && ctaText) ?
         <a className="button solid" href={ctaLink}>{ctaText}</a>
       : "" }
@@ -105,10 +104,11 @@ Events.propTypes = {
   id: PropTypes.string,
   chapterTitle: PropTypes.string.isRequired,
   headline: PropTypes.string.isRequired,
+  body1: PropTypes.string,
   upcomingEvents: PropTypes.object.isRequired,
   laterEvents: PropTypes.object,
   subheadline: PropTypes.string,
-  body: PropTypes.string,
+  body2: PropTypes.string,
   ctaLink: PropTypes.string,
   ctaText: PropTypes.string
 }

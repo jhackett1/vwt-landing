@@ -1,12 +1,10 @@
-// ======================================
-// GATSBY-CONFIG.JS
-// Change site title, Google Web Fonts,
-// favicon and GA tracking ID here
-// ======================================
+var config = require('./src/pages/config.js')
+
+console.log(config)
 
 module.exports = {
   siteMetadata: {
-    title: 'The Future of Online Gaming',
+    title: config.title,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -15,20 +13,20 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Roboto\:100,300,400,700,900`
+          config.fonts
         ]
       }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
+        trackingId: config.trackingId,
       },
     },
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: "./static/logo-small.svg",
+        logo: config.faviconPath,
         injectHTML: true,
         icons: {
           android: true,
