@@ -100,12 +100,13 @@ const IndexPage = ({data}) => (
       id="one"
       chapterTitle="Innovation"
       headline="We’re streamlining the online gaming industry, making it faster, fairer, more democratic and more trustworthy for all."
+      body="Using Blockchain to create a decentralised public system solves many of the challenges developers face with existing architecture. Building our own bespoke protocol means we’re disrupting the entire online gaming market."
       icon={tickIcon}
-      point1Heading="Timely"
+      point1Heading="Timely."
       point1Body="Our bespoke protocol can handle up to 50,000 online gaming transactions per second."
-      point2Heading="Transparent"
+      point2Heading="Transparent."
       point2Body="Smart contracts minimise the risk of money laundering or third-party data breaches, putting control back in the hands of users and developers."
-      point3Heading="Trusted"
+      point3Heading="Trusted."
       point3Body="Our Blockchain technology delivers pseudo-anonymous transactions and total privacy for users, without compromising on the factors they demand: security, reliability and trust. For the committed gamer, we offer complete discretion: the only visible transaction is an investment in a stable cryptocurrency"
       />
 

@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ScrollAnimation from 'react-animate-on-scroll'
+import ReactMarkdown from 'react-markdown'
 
 const SellingPoints = ({
   id,
   chapterTitle,
   headline,
+  body,
   point1Heading,
   point1Body,
   point2Heading,
@@ -19,6 +21,7 @@ const SellingPoints = ({
       {(chapterTitle)? <span className="chapter-title">{chapterTitle}</span>: "" }
       <div className="grid">
         {(headline)? <h2 className="headline">{headline}</h2>: "" }
+        {(body)? <ReactMarkdown escapeHtml={false} source={body} />: "" }
         <ul className="selling-points">
         {(point1Heading && point1Body) ?
           <li>
@@ -58,6 +61,7 @@ export default SellingPoints
 SellingPoints.propTypes = {
   id: PropTypes.string,
   chapterTitle: PropTypes.string.isRequired,
+  body: PropTypes.string,
   headline: PropTypes.string.isRequired,
   point1Heading: PropTypes.string,
   point1Body: PropTypes.string,

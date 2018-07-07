@@ -162,11 +162,19 @@
       .grid
         display: grid
         grid-template-columns: 1fr 1fr
+        grid-template-rows: auto auto 1fr
         grid-column-gap: 50px
+        p
+          text-align: left
         h2.headline
+          grid-column: 1 / 2
           font-size: 2em
           text-align: left
+        div
+          grid-column: 1 / 2
         .selling-points
+          grid-row: 1 / 4
+          grid-column: 2 / 3
           margin-top: -15px
           li
             display: grid
