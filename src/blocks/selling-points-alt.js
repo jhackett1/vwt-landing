@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ScrollAnimation from 'react-animate-on-scroll'
+import ReactMarkdown from 'react-markdown'
 
 const SellingPointsAlt = ({
   id,
@@ -28,7 +29,7 @@ const SellingPointsAlt = ({
               <img src={point1Icon}/>
             </ScrollAnimation>
             <h3>{point1Heading}</h3>
-            <p>{point1Body}</p>
+            <ReactMarkdown className="body" escapeHtml={false} source={point1Body} />
           </li>
         : ""}
         {(point2Heading && point2Body) ?
@@ -37,7 +38,7 @@ const SellingPointsAlt = ({
               <img src={point2Icon}/>
             </ScrollAnimation>
             <h3>{point2Heading}</h3>
-            <p>{point2Body}</p>
+            <ReactMarkdown className="body" escapeHtml={false} source={point2Body} />
           </li>
         : ""}
         {(point3Heading && point3Body) ?
@@ -46,7 +47,7 @@ const SellingPointsAlt = ({
               <img src={point3Icon}/>
             </ScrollAnimation>
             <h3>{point3Heading}</h3>
-            <p>{point3Body}</p>
+            <ReactMarkdown className="body" escapeHtml={false} source={point3Body} />
           </li>
         : ""}
         </ul>

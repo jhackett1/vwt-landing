@@ -25,29 +25,29 @@ const SellingPoints = ({
         <ul className="selling-points">
         {(point1Heading && point1Body) ?
           <li>
-            <ScrollAnimation animateIn="fadeIn" offset={100}>
+            <ScrollAnimation className="image-holder" animateIn="fadeIn" offset={100}>
               <img src={icon}/>
             </ScrollAnimation>
             <h3>{point1Heading}</h3>
-            <p>{point1Body}</p>
+            <ReactMarkdown className="body" escapeHtml={false} source={point1Body} />
           </li>
         : ""}
         {(point2Heading && point2Body) ?
           <li>
-            <ScrollAnimation animateIn="fadeIn" offset={100}>
+            <ScrollAnimation className="image-holder" animateIn="fadeIn" offset={100}>
                <img src={icon}/>
             </ScrollAnimation>
             <h3>{point2Heading}</h3>
-            <p>{point2Body}</p>
+            <ReactMarkdown className="body" escapeHtml={false} source={point2Body} />
           </li>
         : ""}
         {(point3Heading && point3Body) ?
           <li>
-            <ScrollAnimation animateIn="fadeIn" offset={100}>
+            <ScrollAnimation className="image-holder" animateIn="fadeIn" offset={100}>
               <img src={icon}/>
             </ScrollAnimation>
             <h3>{point3Heading}</h3>
-            <p>{point3Body}</p>
+            <ReactMarkdown className="body" escapeHtml={false} source={point3Body} />
           </li>
         : ""}
         </ul>

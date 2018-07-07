@@ -1,6 +1,7 @@
 import React from 'react'
 import * as Fa from 'react-icons/lib/fa'
 import PropTypes from 'prop-types'
+import ReactMarkdown from 'react-markdown'
 
 const Footer = ({
   id,
@@ -22,7 +23,7 @@ const Footer = ({
       <h4 className="organisation-name">{organisationName}</h4>
     :""}
     {(organisationContact)?
-      <p>{organisationContact}</p>
+      <ReactMarkdown escapeHtml={false} source={organisationContact}/>
     :""}
 
     <div className="organisation-social-links">

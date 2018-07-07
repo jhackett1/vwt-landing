@@ -5,8 +5,6 @@ import ReactMarkdown from 'react-markdown'
 import Tabs from '../components/tabs'
 import Caret from '../components/caret'
 
-
-
 const Faq = ({
   id,
   chapterTitle,

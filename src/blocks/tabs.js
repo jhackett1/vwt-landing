@@ -64,7 +64,7 @@ export default class Tabs extends React.Component{
                       )): ""}
                     </ul>
                     <h3>{tabName}</h3>
-                    {(this.props.tabDescriptions) ? <p>{this.props.tabDescriptions[i]}</p> : ""}
+                    {(this.props.tabDescriptions) ? <ReactMarkdown escapeHtml={false} source={this.props.tabDescriptions[i]} /> : ""}
                     <section className="buttons">
 
                       {(this.props.mainCtaLink && this.props.mainCtaText) ?

@@ -44,7 +44,7 @@ const Events = ({
     <div className="container">
       {(chapterTitle)? <span className="chapter-title">{chapterTitle}</span>: "" }
       {(headline)? <h2 className="headline">{headline}</h2>: "" }
-      {(body1)? <ReactMarkdown escapeHtml={false} source={body1} />: "" }
+      {(body1)? <ReactMarkdown className="lede" scapeHtml={false} source={body1} />: "" }
     </div>
       {(upcomingEvents)?
         <div>
@@ -56,7 +56,7 @@ const Events = ({
                   <div className="inner-text">
                     <h3>{eventName}</h3>
                     <h5>{upcomingEvents.timeplaces[i]}</h5>
-                    <p>{upcomingEvents.descriptions[i]}</p>
+                    <ReactMarkdown escapeHtml={false} source={upcomingEvents.descriptions[i]} />
                     {(upcomingEvents.links[i])?
                       <a className="button bare" href={upcomingEvents.links[i]}>Learn more <Caret /></a>
                     : "" }
@@ -74,7 +74,7 @@ const Events = ({
                     <div className="inner-text">
                       <h3>{eventName}</h3>
                       <h5>{upcomingEvents.timeplaces[i]}</h5>
-                      <p>{upcomingEvents.descriptions[i]}</p>
+                      <ReactMarkdown escapeHtml={false} source={upcomingEvents.descriptions[i]} />
                       {(upcomingEvents.links[i])?
                         <a className="button bare" href={upcomingEvents.links[i]}>Learn more <Caret /></a>
                       : "" }

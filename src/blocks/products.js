@@ -26,7 +26,7 @@ const Products = ({
                       <ScrollAnimation offset={70} animateIn="fadeIn"  animateOnce={true} >
                         <svg className="icon" height="8" viewBox="0 0 11 8" width="11"><path d="m11 15.1104002 2.8013301 2.8013302 5.9117304-5.9117304" fill="none" strokeWidth="1.333333" transform="translate(-10 -11)"/></svg>
                       </ScrollAnimation>
-                      {checklistItem}
+                      <ReactMarkdown escapeHtml={false} source={checklistItem}/>
                     </li>
                   ))}
                 </ol>

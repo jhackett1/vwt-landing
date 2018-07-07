@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
 
 import Caret from './caret'
 
@@ -55,7 +56,7 @@ export default class Tabs extends React.Component{
                       this.props.tabQuestions[i].map((tabQuestion, j)=>(
                         <details className="question" key={j}>
                           <summary>{tabQuestion}<Caret/></summary>
-                          <p>{this.props.tabAnswers[i][j]}</p>
+                          <ReactMarkdown escapeHtml={false} source={this.props.tabAnswers[i][j]}/>
 
                         </details>
                       ))

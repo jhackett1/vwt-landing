@@ -4,8 +4,6 @@ import ChartistGraph from 'react-chartist'
 import ScrollAnimation from 'react-animate-on-scroll'
 import ReactMarkdown from 'react-markdown'
 
-
-
 import './chartist.css'
 
 const Graphics = ({

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import * as Fa from 'react-icons/lib/fa'
 import Slider from "react-slick";
 import MediaQuery from 'react-responsive';
+import ReactMarkdown from 'react-markdown'
 
 var settings = {
   dots: true,
@@ -44,7 +45,7 @@ const Team = ({
                 <img alt={teamMemberName} src={teamMembers.images[i]}/>
                 <h3>{teamMemberName}</h3>
                 <h5>{teamMembers.titles[i]}</h5>
-                <p>{teamMembers.bios[i]}</p>
+                <ReactMarkdown escapeHtml={false} source={teamMembers.bios[i]} />
                 <div className="team-member-social-links">
                   {(teamMembers.twitters[i]) ? <a target="blank" href={teamMembers.twitters[i]}><Fa.FaTwitter/></a> : ""}
                   {(teamMembers.linkedins[i]) ? <a target="blank" href={teamMembers.linkedins[i]}><Fa.FaLinkedin/></a> : ""}
