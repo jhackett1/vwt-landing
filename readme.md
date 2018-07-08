@@ -59,7 +59,9 @@ Or to build and beautify at the same time:
 
 ```gatsby build; npm run beautify```
 
-This will make it easier for someone to understand and make minor edits to the generated output later. **Note that this will increase the size of the final website and may lead to slower load times for users.**
+This will make it easier for someone to understand and make minor edits to the generated output later.
+
+**Note that this will increase the size of the final website and may lead to slower load times for users. Ideally, the files should be re-minified following any changes.**
 
 
 ## Static assets

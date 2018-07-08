@@ -18,9 +18,9 @@
 // Mixins
 @mixin gradient
   background: #c09a4b
-  background: -moz-linear-gradient(45deg, #c09a4b 0%, $gradient-light 50%, $gradient-dark 100%)
+  // background: -moz-linear-gradient(45deg, #c09a4b 0%, $gradient-light 50%, $gradient-dark 100%)
   background: -webkit-linear-gradient(45deg, $gradient-dark 0%,$gradient-light 50%,$gradient-dark 100%)
-  background: linear-gradient(45deg, $gradient-dark 0%,$gradient-light 50%,$gradient-dark 100%)
+  // background: linear-gradient(45deg, $gradient-dark 0%,$gradient-light 50%,$gradient-dark 100%)
   animation: glisten 1s ease infinite
 
 @mixin labelText
@@ -259,14 +259,16 @@ form input
   padding: 50px 0px
   h2.headline
     font-weight: 300
-    color: $gradient-light
+    color: $lightest
     text-align: center
     margin-bottom: 40px
   p
     text-align: center
     margin-bottom: 40px
   .chapter-title
-    color: $lightest
+    @include gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
     &::before
       border-color: $lightest
   .selling-points
@@ -388,7 +390,7 @@ form input
   padding: 50px 0px
   h2.headline
     font-weight: 300
-    color: $gradient-light
+    color: $lightest
     text-align: center
     margin-bottom: 20px
   p
@@ -629,7 +631,9 @@ form input
   color: $lightest
   padding: 50px 0px
   .chapter-title
-    color: $lightest
+    @include gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
     margin-bottom: 70px
     &::before
       border-color: $lightest
@@ -721,10 +725,14 @@ form input
         z-index: 1
 
       h5
+        display: inline-block
         text-transform: uppercase
         font-weight: 600
         margin-bottom: 5px
         letter-spacing: 1px
+        @include gradient
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
       p
         font-size: 0.95em
       .icon
@@ -799,7 +807,7 @@ form input
   text-align: center
   h2.headline
     font-weight: 300
-    color: $gradient-light
+    color: $lightest
     text-align: center
     margin-bottom: 40px
   p
