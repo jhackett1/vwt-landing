@@ -45,6 +45,10 @@ import pressLogo5 from '../../static/logo5.jpg'
 import pressLogo6 from '../../static/logo6.jpg'
 import cards from '../../static/cards.png'
 import tokens from '../../static/tokens.png'
+import london from '../../static/london-wide.png'
+import londonSmall from '../../static/london.png'
+import berlin from '../../static/berlin.png'
+import sanfran from '../../static/sanfran.png'
 
 // LAYOUT AND CONTENT
 // Arrange your blocks and insert content into each one
@@ -227,12 +231,12 @@ const IndexPage = ({data}) => (
       body1="We’re hosting events all over the world to demonstrate how our technology will revolutionise the online gambling industry."
       upcomingEvents={{
         images: [
-          'http://placehold.it/200x200',
-          'http://placehold.it/200x200',
-          'http://placehold.it/200x200'
+          london,
+          berlin,
+          sanfran
         ],
         names: ['Event name', 'Event name', 'Event name'],
-        timeplaces: ['London, 2nd July 2018', 'London, 2nd July 2018', 'London, 2nd July 2018'],
+        timeplaces: ['London, 2nd July 2018', 'Berlin, 2nd July 2018', 'San Fransisco, 2nd July 2018'],
         descriptions: [
           'Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et.', 'Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et.',
           'Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et.'
@@ -241,11 +245,11 @@ const IndexPage = ({data}) => (
       }}
       laterEvents={{
         images: [
-          'http://placehold.it/200x200',
-          'http://placehold.it/200x200',
-          'http://placehold.it/200x200',
-          'http://placehold.it/200x200',
-          'http://placehold.it/200x200'
+          londonSmall,
+          londonSmall,
+          londonSmall,
+          londonSmall,
+          londonSmall
         ],
         names: ['Event name', 'Event name', 'Event name', 'Event name', 'Event name'],
         timeplaces: ['London, 2nd July 2018', 'London, 2nd July 2018', 'London, 2nd July 2018', 'London, 2nd July 2018', 'London, 2nd July 2018']
