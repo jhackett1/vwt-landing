@@ -360,7 +360,6 @@ Install an application called MetaMask into your web browser. When you're done, 
 
 When you have your wallet address details, email it to ico@variusworldtech.com. You’ll then be ready to take part in our ICO.`,
           `During the VWT private pre-sale, the minimum stake will be 100,000 USD in value. However, if you miss the pre-sale you will be able to purchase tokens from as little as 100 USD and up.`,
-          `During the VWT private pre-sale, the minimum stake will be 100,000 USD in value. However, if you miss the pre-sale you will be able to purchase tokens from as little as 100 USD and up.`,
           "Now you’re talking our language. Here at VWT we love high rollers, but as I’m sure you can appreciate, our process for high-volume investors is much more individual and exclusive. To find out more, email [highrollers@variusworldtech.com](mailto:highrollers@variusworldtech.com).",
           "Potentially. If you are lucky enough to be part of the private sale you can use any known cryptocurrency to participate. However, during the public sale we will only be accepting Bitcoin, Ether and Litecoin (rates on the day may change) to buy VWT tokens.",
           "Afraid not. Due to somewhat delicate and complex tokenomics (economics of the token), VWT will remain the only authorised dealers of the VWT token during the ICO. However, if you wish to sell your tokens at any time after the ICO, please email [ico@variusworldtech.com](mailto:ico@variusworldtech.com) and we can arrange this.",
