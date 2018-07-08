@@ -19,7 +19,7 @@
 @mixin gradient
   background: #c09a4b
   // background: -moz-linear-gradient(45deg, #c09a4b 0%, $gradient-light 50%, $gradient-dark 100%)
-  background: -webkit-linear-gradient(45deg, $gradient-dark 0%,$gradient-light 50%,$gradient-dark 100%)
+  background: -webkit-linear-gradient(45deg, $gradient-dark 0%,$gradient-light 80%,$gradient-dark 100%)
   // background: linear-gradient(45deg, $gradient-dark 0%,$gradient-light 50%,$gradient-dark 100%)
   animation: glisten 1s ease infinite
 
@@ -136,6 +136,9 @@ form input
   margin-bottom: 15px
   transform: translateY(1.5px)
   min-width: 50px
+
+p a
+  color: $brand
 
 .slick-dots
   li
@@ -270,7 +273,7 @@ form input
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     &::before
-      border-color: $lightest
+      border-color: $gradient-light
   .selling-points
     h3
       @include gradient
@@ -639,7 +642,7 @@ form input
     -webkit-text-fill-color: transparent
     margin-bottom: 70px
     &::before
-      border-color: $lightest
+      border-color: $gradient-light
   .milestones
     display: grid
     grid-template-columns: 1fr 1fr

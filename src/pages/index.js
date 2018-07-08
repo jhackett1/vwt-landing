@@ -29,22 +29,22 @@ import logo from '../../static/logo.svg'
 import logoDark from '../../static/logo-blue.svg'
 import logoGold from '../../static/logo-gold.svg'
 import logoSmall from '../../static/logo-small.svg'
-import animatedRing from '../../static/animated-ring.svg'
+import animatedRing from '../../static/animated-ring.png'
 import tickIcon from '../../static/tick-icon.svg'
 import aceIcon from '../../static/ace-icon.svg'
 import glassesIcon from '../../static/glasses-icon.svg'
 import govIcon from '../../static/gov-icon.svg'
-import software1 from '../../static/software-1.jpg'
-import software2 from '../../static/software-2.jpg'
-import software3 from '../../static/software-3.jpg'
+import software1 from '../../static/software-1@2x.png'
+import software2 from '../../static/software-2@2x.png'
+import software3 from '../../static/software-3@2x.png'
 import pressLogo1 from '../../static/logo1.jpg'
 import pressLogo2 from '../../static/logo2.jpg'
 import pressLogo3 from '../../static/logo3.jpg'
 import pressLogo4 from '../../static/logo4.jpg'
 import pressLogo5 from '../../static/logo5.jpg'
 import pressLogo6 from '../../static/logo6.jpg'
-import cards from '../../static/cards.png'
-import tokens from '../../static/tokens.png'
+import cards from '../../static/cards@2x.png'
+import tokens from '../../static/coins@2x.png'
 import london from '../../static/london-wide.png'
 import londonSmall from '../../static/london.png'
 import berlin from '../../static/berlin.png'
@@ -331,27 +331,48 @@ const IndexPage = ({data}) => (
     <Faq
       id="three"
       chapterTitle="FAQ"
-      tabNames={["Coin", "Account", "Security", "Team", "Legal"]}
+      tabNames={["About ICOs", "VWT's ICO", "Other"]}
       tabQuestions={[
-        ["What is VWT?", "Is VWT a utility token?", "Why should I use VWT?"],
-        ["Is VWT secure?", "How can I buy and sell VWT?", "Why should I use VWT?"],
-        ["What is VWT?", "Is VWT a utility token?", "Why should I use VWT?"],
+        ["What is an ICO?", "Why would I want to invest in an ICO?", "How big is the market for ICOs?", "Are ICOs legal?"],
+        ["Why is VWT launching its own ICO?", "How can I participate?", "What is the minimum amount of VWT tokens I can buy?", "And what's the maximum?", "Can I use other cryptocurrencies to participate in the ICO?", "Can I sell my VWT tokens during the ICO?", "How does VWT guard against risks for investors?"],
+        ["Is there a reward for referrals?", "Can I register my interest in the casino software now?", "Can my organisation join the VoX wallet?", "I have a question or concern. Who should I contact?"],
       ]}
       tabAnswers={[
         [
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
+          "An ICO is an ‘Initial Coin Offering’. It’s a way for a new company to raise funds, specifically by issuing units of a cryptocurrency. It’s similar to an IPO (Initial Public Offering) although in the case of an ICO, the investor gets the chance to invest in coins or tokens rather than company shares. The aim is that one day those tokens will have a value or be available to spend on the company’s own purpose-built systems.",
+          "Cast your mind back to 2009. If someone told you about a great opportunity to invest in a clever start-up called ‘Uber’, would you have taken the chance? It’s definitely easier to say ‘yes’ with the benefit of hindsight. But an ICO presents smart investors with the opportunity to take a shot and play their part in helping to bring an idea to life.",
+          "According to a Fabric Ventures and TokenData report, $5.6 billion was raised worldwide through Initial Coin Offerings (ICOs) in 2017. Base-case estimates suggest the global Blockchain market will reach $60.7 billion in 2024.",
+          "Yes, it’s perfectly legal to invest in an ICO in almost all countries and jurisdictions, although you should note that to date, ICOs are banned in China and South Korea. For more information, it’s worth taking a look at [this article from Bitcoin Market Journal](https://www.bitcoinmarketjournal.com/ico-regulations/)."
         ],
         [
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
+          "We’re on our way to becoming the innovation and technology partner of choice for the entire online gaming industry. And we’re inviting investors to play a part in this revolution. The purpose of our ICO is to allow investors to participate in the development of the VWT ecosystem in its early stages, to take a stake in the online gaming industry and to allow online players to play casino games seamlessly.",
+          `It’s simple… Just follow these three steps:
+
+**Step 1: Create your own Ethereum wallet**
+
+Visit MyEtherWallet.com and create a new wallet. It's quite simple, although we suggest you watch this video to get started.
+
+**Step 2: Install an Ethereum web application**
+
+Install an application called MetaMask into your web browser. When you're done, you can import the files you just downloaded. Once you have your wallet installed into your browser you'll need to copy and paste the wallet address.
+
+**Step 3: Let us know your details**
+
+When you have your wallet address details, email it to ico@variusworldtech.com. You’ll then be ready to take part in our ICO.`,
+          `During the VWT private pre-sale, the minimum stake will be 100,000 USD in value. However, if you miss the pre-sale you will be able to purchase tokens from as little as 100 USD and up.`,
+          `During the VWT private pre-sale, the minimum stake will be 100,000 USD in value. However, if you miss the pre-sale you will be able to purchase tokens from as little as 100 USD and up.`,
+          "Now you’re talking our language. Here at VWT we love high rollers, but as I’m sure you can appreciate, our process for high-volume investors is much more individual and exclusive. To find out more, email [highrollers@variusworldtech.com](mailto:highrollers@variusworldtech.com).",
+          "Potentially. If you are lucky enough to be part of the private sale you can use any known cryptocurrency to participate. However, during the public sale we will only be accepting Bitcoin, Ether and Litecoin (rates on the day may change) to buy VWT tokens.",
+          "Afraid not. Due to somewhat delicate and complex tokenomics (economics of the token), VWT will remain the only authorised dealers of the VWT token during the ICO. However, if you wish to sell your tokens at any time after the ICO, please email [ico@variusworldtech.com](mailto:ico@variusworldtech.com) and we can arrange this.",
+          "We have a partnership in place with a cryptocurrency insurance specialist. In the unlikely event that something goes wrong during the ICO, they are authorised to return the value of the tokens purchased back to investors. At VWT, we’re here to bring trust back to the online gaming industry, so you should feel that your money is in safe hands and that we’ll look after you if an issue arises."
         ],
         [
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
-          "Provident est voluptatum modi. Saepe reprehenderit dolore nesciunt perspiciatis et. Iure ducimus odit neque et voluptatem quaerat nam voluptatem.",
+          `Most definitely. If you refer someone to the VWT ICO who then goes on to buy a significant number of tokens, we will be happy to show you our appreciation. To claim a referral reward, email [affiliates@variusworldtech.com](mailto:affiliates@variusworldtech.com).
+
+Once we have all the details from you and the investors you referred, we’ll confirm the amount with you and process your reward. We will aim to do this within a week of you contacting us, but please allow up to a month during periods of high transaction activity.`,
+          "Definitely. We’re currently looking for casinos to showcase our software. If you are interested in running a casino on our platform, please email [casinos@variusworldtech.com](mailto:casinos@variusworldtech.com) and they will be delighted to give you a rundown of our software offering.",
+          "Absolutely! It’s our objective to partner with the world’s best online casinos and betting sites. If you have an existing gaming website would integrate perfectly with the VoX Wallet, send an email to [wallet@variusworldtech.com](mailto:wallet@variusworldtech.com) and let’s have a conversation.",
+          "The world of cryptocurrencies is complex and fast-changing. That’s why we have a dedicated legal counsel and work closely with regulators to make sure our ICO meets the highest standards and complies with the spirit of investment regulation. If you wish to raise an issue or have spotted something that you think we need to address, email our legal team at [thelegals@variusworldtech.com](mailto:thelegals@variusworldtech.com) and they will be happy to discuss this with you.  "
         ],
       ]}
       subheadline="Can't find your answer?"

@@ -13,6 +13,7 @@
     "gatsby-plugin-google-fonts": "0.0.4",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-sass": "^1.0.26",
+    "js-beautify": "^1.7.5",
     "prop-types": "^15.6.2",
     "react-animate-on-scroll": "^2.1.5",
     "react-chartist": "^0.13.1",
